@@ -1,0 +1,76 @@
+.header {
+  @apply w-full h-screen flex flex-col items-center justify-between;
+  font-family: 'Comfortaa', sans-serif;
+
+  .head-text {
+    @apply flex flex-col items-center justify-center w-2/3 text-primary_light gap-14;
+    h1 {
+      @apply 2xl:text-5xl md:text-4xl text-2xl tracking-wider text-center;
+      font-family: 'shango-bold', sans-serif;
+      line-height: 138%;
+    }
+
+    button {
+      @apply px-9 py-5 border border-primary_light relative 2xl:text-lg xl:text-base opacity-80;
+      span {
+        @apply bg-primary_black absolute -z-10 top-0 bottom-0 left-1/2 right-1/2 opacity-0 group-hover:opacity-10 group-hover:right-0 group-hover:left-0;
+        transition: 0.5s;
+      }
+
+      &:hover {
+        span {
+          @apply opacity-20 right-0 left-0;
+        }
+      }
+    }
+
+    .play {
+      @apply flex items-center gap-4 cursor-pointer 2xl:text-lg xl:text-base opacity-80;
+
+      img {
+        @apply w-4;
+      }
+    }
+  }
+
+  .head-bottom {
+    @apply flex w-full md:justify-between justify-center items-center 2xl:px-52 xl:px-14 lg:px-7 px-6 pb-10;
+    p {
+      @apply hidden md:flex items-center gap-2 text-primary_light font-normal text-base leading-5 opacity-80;
+      img {
+        @apply w-4;
+      }
+    }
+
+    img {
+      @apply w-8;
+    }
+
+    .mouse {
+      @apply flex items-center justify-center flex-col cursor-pointer;
+      svg {
+        @apply text-primary_light w-8 h-12 opacity-50;
+      }
+
+      img {
+        @apply w-4 absolute;
+        animation-name: chevronAnim;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+
+        @keyframes chevronAnim {
+          from {
+            bottom: 30px;
+          }
+          50% {
+            bottom: 15px;
+          }
+          to {
+            bottom: 30px;
+          }
+        }
+
+      }
+    }
+  }
+}
