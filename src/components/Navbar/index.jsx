@@ -1,16 +1,12 @@
 import React, {useEffect, useState} from 'react'
 import classes from "./navbar.module.scss"
 import logo from "../../assets/png/logo.png"
-import {useTranslation} from "react-i18next"
 import phone from "../../assets/ico/phone.png"
 import langIco from "../../assets/ico/lang.png";
 import clock from "../../assets/ico/clock.png";
 import location from "../../assets/ico/location.png";
 
 export default function Navbar() {
-
-    const {t, i18n} = useTranslation()
-    const {language} = i18n
 
     const [position, setPosition] = useState(0)
 
@@ -47,7 +43,7 @@ export default function Navbar() {
     ]
 
     const links4 = [
-        {id: 1, name: <>Аксессуары</>, href: '#service'},
+        {id: 1, name: <>Аксессуары</>, href: 'https://'},
         {
             id: 2,
             name: <>
@@ -60,7 +56,7 @@ export default function Navbar() {
             id: 3,
             name: <>
                 <img src={langIco} alt="lang_item" className={"w-6"}/>
-                <p>Рус</p>
+                Рус
             </>,
             href: 'tel:+998 97 101 88-80'
         }
@@ -118,7 +114,7 @@ export default function Navbar() {
 
             <div className={"hidden xl:flex"}>
                 <ul className={classes['nav-ul']}>
-                    {links4.map(link => <li key={link.id}><a className={"flex items-center gap-3"}
+                    {links4.map(link => <li key={link.id}><a className={"flex items-center gap-2"}
                                                              href={link.href}>{link.name}</a>
                     </li>)}
                 </ul>
@@ -155,7 +151,8 @@ export default function Navbar() {
                             </div>
                             <div className={classes.social}>
                                 <ul>
-                                    {social.map(item=> <li key={item.link}><a href={item.link} target={"_blank"}>{item.name}</a></li>)}
+                                    {social.map(item => <li key={item.link}><a href={item.link}
+                                                                               target={"_blank"}>{item.name}</a></li>)}
                                 </ul>
                             </div>
                         </div>

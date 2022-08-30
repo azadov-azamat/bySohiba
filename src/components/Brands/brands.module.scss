@@ -1,0 +1,50 @@
+.wrapper {
+  @apply w-full pt-36 2xl:px-52 xl:px-14 lg:px-7 px-6;
+  .title {
+    @apply w-full flex justify-center items-center text-xl xl:text-3xl lg:text-2xl uppercase pb-10;
+    font-family: 'shango-bold', sans-serif;
+
+    p {
+      @apply flex text-primary_text_black;
+      span {
+        @apply text-primary_yellow flex;
+        p {
+          @apply text-primary_yellow text-xl;
+        }
+      }
+    }
+  }
+
+  .card {
+    @apply w-full flex items-center shadow shadow-service rounded cursor-pointer;
+    &:hover {
+      .img{
+        transform: scale(1.1);
+      }
+    }
+    .img {
+      @apply md:w-80 w-64;
+      transition: 0.5s;
+
+    }
+
+    .card-text {
+      @apply gap-9 text-center flex flex-col float-right;
+      div {
+        img {
+          @apply md:w-44 w-36;
+        }
+
+        p {
+          @apply font-normal text-lg uppercase text-primary_blackmd;
+          font-family: 'Shango-Medium', sans-serif;
+        }
+      }
+
+      p {
+        @apply text-xl text-primary_text_black;
+        font-family: 'shango-medium-2', sans-serif;
+      }
+    }
+  }
+}

@@ -9,6 +9,7 @@ import {store} from "./redux/store"
 import './index.css'
 import "aos/dist/aos"
 import "aos/dist/aos.css"
+import 'antd/dist/antd.css'
 import "react-toastify/dist/ReactToastify.css"
 
 import App from './App'

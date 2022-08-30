@@ -17,32 +17,38 @@
 // })
 
 import {createSlice} from "@reduxjs/toolkit"
+import wedding from "../../assets/png/wedding.png"
+import abayas from "../../assets/png/abayas.png"
+import beauty from "../../assets/png/beauty.png"
+import accessories from "../../assets/png/accessories.png"
 
 export const variablesSlice = createSlice({
     name: 'variables',
     initialState: {
-        categories: [
-            {label: 'Фронтенд', value: 'frontend'},
-            {label: 'Бекенд', value: 'backend'},
-            {label: 'Веб дизайн', value: 'design'}
-        ],
         service: [
             {
                 id: 1,
-                title: 'Веб-дизайн',
-                text: 'Проектирование и визуализация продуктов, их макетов и прототипов. *Визуализация прототипа,\n' +
-                    '*Проектирование сайта или приложения\n' +
-                    '*Взаимодействие с пользователем.'
+                img: wedding,
+                title: 'Weddings',
+                text: 'свадебные платья'
             },
             {
                 id: 2,
-                title: 'Front-end development ',
-                text: 'FrontEnd разработчик создает видимую для пользователя часть веб-страницы и его главная задача – точно передать в верстке то, что создал дизайнер, а также реализовать пользовательскую логику.\n'
+                img: abayas,
+                title: 'Abayas',
+                text: 'Абая Бутик'
             },
             {
                 id: 3,
-                title: 'Back-end development',
-                text: 'Процесс программирования, конечной целью которого является разработка серверной части web-ресурса и ее объединение с пользовательской стороной.'
+                img: beauty,
+                title: 'Beauty salon',
+                text: 'салон красоты'
+            },
+            {
+                id: 4,
+                img: accessories,
+                title: 'accessories',
+                text: 'Аксессуары'
             }
         ],
         portfolio: [],

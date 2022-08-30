@@ -17,7 +17,8 @@ module.exports = {
       },
       boxShadow: {
         nav: "0 4px 10px rgba(0, 0, 0, 0.4)",
-        service: '-10px -10px 20px rgba(0, 0, 0, 0.3), 10px 10px 20px rgba(0, 0, 0, 0.3)',
+        service: '0px 4px 60px rgba(204, 193, 142, 0.1)',
+        serviceBg: '0px 4px 60px rgba(212, 226, 213, 0.5)',
         footer: '0px -1px 20px rgba(0, 0, 0, 0.5)'
       },
       dropShadow: {

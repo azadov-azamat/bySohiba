@@ -15,10 +15,10 @@
   }
 
   .nav-ul {
-    @apply flex justify-between items-center text-primary_light gap-9;
+    @apply flex justify-between items-center gap-9;
     li {
       a {
-        @apply font-normal text-base leading-5 opacity-80;
+        @apply text-primary_light font-normal text-base leading-5 opacity-80;
         img {
           @apply w-4 h-4 object-center object-cover;
         }
@@ -84,15 +84,17 @@
     }
 
     .menu {
-      @apply fixed right-[-1000px] top-0 z-10 flex flex-col gap-20 justify-center items-center bg-primary_light w-full px-8 sm:px-14;
+      @apply fixed right-[-1000px] top-0 z-10 flex flex-col gap-10 justify-center items-center bg-primary_light w-full px-8 sm:px-14;
       font-family: 'shango-bold', sans-serif;
       transition-duration: .25s;
 
       .menu-ul {
-        @apply flex flex-col items-center gap-8 text-3xl sm:text-4xl text-primary_text_black leading-6 uppercase ;
+        @apply flex flex-col items-center gap-8 text-3xl sm:text-4xl leading-6 uppercase ;
         li {
-          transition-duration: .25s;
-          @apply hover:text-primary_yellow;
+          a{
+            transition-duration: .25s;
+            @apply hover:text-primary_yellow text-primary_text_black;
+          }
         }
       }
 
@@ -101,7 +103,7 @@
         font-family: 'Comfortaa', sans-serif;
 
         .setting {
-          @apply flex flex-col sm:gap-0 gap-10 justify-between h-full;
+          @apply flex flex-col sm:gap-0 gap-7 justify-between h-full;
           .lang {
             @apply flex gap-4;
 
@@ -125,13 +127,18 @@
 
           .social {
             ul {
-              @apply flex items-center gap-9 text-primary_blackmd;
+              @apply flex items-center gap-9;
+              li{
+                a{
+                  @apply text-primary_blackmd;
+                }
+              }
             }
           }
         }
 
         .address {
-          @apply flex flex-col gap-4 mt-6 sm:mt-0;
+          @apply flex flex-col gap-2 mt-3 sm:mt-0;
           p {
             @apply flex items-center gap-2;
             div {

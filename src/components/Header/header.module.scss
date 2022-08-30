@@ -5,7 +5,7 @@
   .head-text {
     @apply flex flex-col items-center justify-center w-2/3 text-primary_light gap-14;
     h1 {
-      @apply 2xl:text-5xl md:text-4xl text-2xl tracking-wider text-center;
+      @apply 2xl:text-5xl md:text-4xl text-2xl tracking-wider text-center text-primary_light;
       font-family: 'shango-bold', sans-serif;
       line-height: 138%;
     }

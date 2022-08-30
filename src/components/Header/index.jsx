@@ -34,7 +34,7 @@ export default function Header() {
                     <img src={location} alt="location-ico"/>
                     Ташкент, улица Мирза Голиб 1
                 </p>
-                <div className={classes.mouse}>
+                <a href={"#brands"} className={classes.mouse}>
                     <svg xmlns="http://www.w3.org/2000/svg"
                          width="16" height="16"
                          fill="currentColor" className="bi bi-mouse mouse-icon"
@@ -47,7 +47,7 @@ export default function Header() {
 
                     <img src={downUp} className="chevron-icon" alt="" />
 
-                </div>
+                </a>
                 <p>
                     <img src={clock} alt="clock-ico"/>
                     Без выходных 10:00 - 19:00

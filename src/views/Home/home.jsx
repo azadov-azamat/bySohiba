@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
 import AOS from "aos"
-import Header from "../../components/Header";
+import Header from "../../components/Header"
+import Brands from "../../components/Brands"
 
 export default function Home() {
 
@@ -13,6 +14,7 @@ export default function Home() {
     return (
         <>
             <Header/>
+            <Brands/>
         </>
     )
 }
