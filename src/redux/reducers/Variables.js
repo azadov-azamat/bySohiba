@@ -22,6 +22,12 @@ import abayas from "../../assets/png/abayas.png"
 import beauty from "../../assets/png/beauty.png"
 import accessories from "../../assets/png/accessories.png"
 
+import img1 from "../../assets/delete/img.png"
+import img2 from "../../assets/delete/img_1.png"
+import img3 from "../../assets/delete/img_2.png"
+import img4 from "../../assets/delete/img_3.png"
+import img5 from "../../assets/delete/img_4.png"
+
 export const variablesSlice = createSlice({
     name: 'variables',
     initialState: {
@@ -49,6 +55,28 @@ export const variablesSlice = createSlice({
                 img: accessories,
                 title: 'accessories',
                 text: 'Аксессуары'
+            }
+        ],
+        instagram: [
+            {
+                id: 1,
+                img: img1
+            },
+            {
+                id: 2,
+                img: img2
+            },
+            {
+                id: 3,
+                img: img3
+            },
+            {
+                id: 4,
+                img: img4
+            },
+            {
+                id: 5,
+                img: img5
             }
         ],
         portfolio: [],

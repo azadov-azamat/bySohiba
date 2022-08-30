@@ -1,0 +1,28 @@
+.wrapper {
+  @apply pt-16 lg:px-0 px-4;
+
+  .title {
+    @apply w-full flex flex-col items-center justify-center text-center;
+    img {
+      @apply w-48;
+    }
+
+    p {
+      @apply mt-6 text-primary_text_black;
+    }
+  }
+
+  .row {
+    @apply justify-center;
+    img {
+      @apply w-56 md:w-64;
+    }
+  }
+
+  .bottom {
+    @apply w-full flex justify-center pt-10 pb-16;
+    button {
+
+    }
+  }
+}
