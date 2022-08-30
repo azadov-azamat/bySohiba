@@ -81,15 +81,15 @@ export default function Navbar() {
 
     const social = [
         {
-            link: "#",
+            link: "https://www.instagram.com/azadov_azamat",
             name: 'Instagram'
         },
         {
-            value: "#",
+            link: "https://t.me/azamat_azadov",
             name: 'Telegram'
         },
         {
-            value: "#",
+            link: "https://t.me/azamat_azadov",
             name: 'Tik tok'
         }
     ]
@@ -155,7 +155,7 @@ export default function Navbar() {
                             </div>
                             <div className={classes.social}>
                                 <ul>
-                                    {social.map(item=> <li key={item.value}><a href={item.value} target={"_blank"}>{item.name}</a></li>)}
+                                    {social.map(item=> <li key={item.link}><a href={item.link} target={"_blank"}>{item.name}</a></li>)}
                                 </ul>
                             </div>
                         </div>
