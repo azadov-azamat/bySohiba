@@ -4,9 +4,9 @@ import logo from "../../assets/png/logo.png"
 import {FiPhone} from "react-icons/fi"
 import {BsClock, BsGlobe} from "react-icons/bs"
 import {IoLocationOutline} from "react-icons/io5"
-import {useSelector} from "react-redux";
-import {Link} from "react-router-dom";
-import {defaultRoute} from "../../utils/constants";
+import {useSelector} from "react-redux"
+import {Link} from "react-router-dom"
+import {defaultRoute} from "../../utils/constants"
 
 export default function Navbar() {
 
@@ -25,13 +25,13 @@ export default function Navbar() {
 
     const links = [
         {id: 1, name: 'Свадебные платья', href: '/weddings'},
-        {id: 2, name: 'Abaya Boutique', href: '#portfolio'},
+        {id: 2, name: 'Abaya Boutique', href: '/abayas'},
         {id: 3, name: 'Beauty salon', href: '#contact'}
     ]
 
     const links2 = [
         {id: 1, name: 'Свадебные платья', href: '/weddings'},
-        {id: 2, name: 'Abaya Boutique', href: '#portfolio'}
+        {id: 2, name: 'Abaya Boutique', href: '/abayas'}
     ]
 
     const links3 = [
@@ -40,7 +40,7 @@ export default function Navbar() {
     ]
     const linksMd = [
         {id: 1, name: 'Свадебные платья', href: '/weddings'},
-        {id: 2, name: 'Abaya Boutique', href: '#portfolio'},
+        {id: 2, name: 'Abaya Boutique', href: '/abayas'},
         {id: 3, name: 'Beauty salon', href: '#contact'},
         {id: 3, name: 'Аксессуары', href: '#contact'}
     ]

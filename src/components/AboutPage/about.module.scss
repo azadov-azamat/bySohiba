@@ -12,6 +12,10 @@
         img {
           @apply 2xl:w-32 xl:w-28 lg:w-24 md:w-20 sm:w-28 w-24;
         }
+
+        .warn {
+          @apply text-primary_yellow uppercase;
+        }
       }
 
       .span {
@@ -22,9 +26,22 @@
     .about {
       @apply font-medium text-primary_text_black leading-6 tracking-wider;
       font-family: 'Comfortaa', sans-serif;
+
+      ul {
+        @apply flex flex-col;
+        li {
+          &:before {
+            @apply w-3 h-3 inline-block mx-2;
+            background-image: url("../../assets/ico/li.png");
+            background-repeat: no-repeat;
+            background-size: 12px 12px;
+            content:"";
+          }
+        }
+      }
     }
 
-    .btn{
+    .btn {
       @apply flex justify-start;
       button {
         @apply 2xl:py-5 xl:py-4 lg:py-3 py-2 2xl:px-12 xl:px-10 lg:px-8 px-6 bg-primary_black text-primary_light rounded;

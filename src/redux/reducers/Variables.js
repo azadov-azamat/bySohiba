@@ -55,7 +55,7 @@ export const variablesSlice = createSlice({
             {
                 id: 1,
                 img: wedding,
-                title: 'Video',
+                title: 'Weddings',
                 text: 'свадебные платья'
             },
             {

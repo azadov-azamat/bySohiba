@@ -37,7 +37,7 @@
     .border-head {
       @apply 2xl:py-14 2xl:px-20 xl:py-12 xl:px-16 lg:py-10 lg:px-14 md:py-8 md:px-12 py-6 px-4 border border-primary_light text-center bg-primary_page backdrop-blur-lg;
       .span {
-        @apply 2xl:text-4xl xl:text-3xl lg:text-2xl md:text-xl text-base  uppercase tracking-wider text-primary_light;
+        @apply 2xl:text-4xl xl:text-2xl lg:text-2xl md:text-xl text-base  uppercase tracking-wider text-primary_light;
         font-family: 'Shango-Bold', sans-serif;
 
         span {
