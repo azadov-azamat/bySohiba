@@ -1,0 +1,123 @@
+.wrapper {
+  @apply 2xl:px-48 xl:px-14 lg:px-7 px-6 pb-16;
+
+  .title {
+    @apply w-full flex justify-center items-center text-xl xl:text-3xl lg:text-2xl uppercase pb-2;
+    font-family: 'shango-bold', sans-serif;
+
+    p {
+      @apply flex text-primary_text_black;
+      span {
+        @apply text-primary_yellow flex;
+        p {
+          @apply text-primary_yellow text-xl;
+        }
+      }
+    }
+  }
+
+  .owl-theme {
+    .carousel {
+      @apply sm:w-80 w-full h-72 flex items-center;
+      .list {
+        @apply w-full h-56 flex flex-col gap-4 py-14 px-8 shadow shadow-comments rounded-2xl bg-primary_light  relative;
+
+        .head {
+          @apply absolute -top-7 sm:left-32 left-52 z-50;
+          .quote {
+            @apply w-12 h-12 rounded-full bg-primary_black flex justify-center items-center;
+            img {
+              @apply object-cover object-center;
+            }
+          }
+        }
+
+        .p-text {
+          @apply w-full font-light text-base text-primary_black;
+          font-family: 'Comfortaa', sans-serif;
+        }
+
+        .owner {
+          @apply w-full flex justify-between items-center;
+          .stars {
+            @apply flex items-center;
+            svg {
+              @apply text-primary_black;
+            }
+          }
+
+          .name {
+            @apply font-medium text-base text-primary_black;
+            font-family: 'Comfortaa', sans-serif;
+          }
+        }
+      }
+    }
+  }
+
+  .create {
+    @apply w-full md:h-72 h-[500px] flex shadow shadow-comments rounded-2xl pt-12 px-12;
+
+    .img {
+      @apply w-[35%] relative overflow-hidden hidden xl:block;
+      span {
+        @apply text-primary_text_black text-3xl tracking-wider;
+        font-family: 'Shango-Bold', sans-serif;
+      }
+
+      img {
+        @apply absolute -bottom-6 -z-10 left-1/4;
+      }
+    }
+
+    .type-comment {
+      @apply xl:w-[60%] w-full md:h-full flex md:flex-row flex-col justify-between pb-12;
+
+      .textarea {
+        @apply md:w-[57%] w-full h-full relative flex flex-col;
+        textarea {
+          @apply w-full h-full px-5 py-4;
+        }
+        span{
+          @apply absolute bottom-4 right-5 text-[#7F7F7F];
+        }
+      }
+
+      textarea, input {
+        @apply border border-primary_black rounded text-[#7F7F7F];
+        font-family: 'Comfortaa', sans-serif;
+
+        &:focus {
+          border: 1px solid #6C9392 !important;
+        }
+      }
+
+      .name {
+        @apply flex flex-col md:w-[37%] w-full md:pt-0 pt-4 gap-4 pb-0;
+        label {
+          @apply flex items-center font-normal text-sm text-primary_black gap-2 cursor-pointer;
+          font-family: 'Comfortaa', sans-serif;
+
+          span{
+            @apply mx-2;
+          }
+          input{
+            @apply border-primary_checkbox;
+
+          }
+        }
+
+        .stars{
+          @apply flex w-full justify-between;
+          svg{
+            @apply text-primary_text_black text-3xl cursor-pointer;
+          }
+        }
+        button{
+          @apply w-full py-3 flex justify-center items-center bg-primary_black rounded text-primary_light;
+          font-family: 'Comfortaa', sans-serif;
+        }
+      }
+    }
+  }
+}

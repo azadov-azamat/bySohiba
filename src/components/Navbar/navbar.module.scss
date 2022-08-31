@@ -4,7 +4,7 @@
   font-family: 'Comfortaa', sans-serif;
 
   .logo {
-    @apply flex flex-col items-center justify-center cursor-pointer z-[1000];
+    @apply flex flex-col items-center justify-center cursor-pointer z-[1000] pt-3;
     img {
       @apply 2xl:w-32 w-28;
     }
@@ -143,8 +143,8 @@
             @apply flex items-center gap-2;
             div {
               @apply bg-primary_black w-7 h-7 rounded-full flex justify-center items-center;
-              img {
-                @apply w-4;
+              svg {
+                @apply w-4 text-primary_light;
               }
             }
           }

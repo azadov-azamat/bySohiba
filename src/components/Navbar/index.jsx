@@ -1,10 +1,9 @@
 import React, {useEffect, useState} from 'react'
 import classes from "./navbar.module.scss"
 import logo from "../../assets/png/logo.png"
-import phone from "../../assets/ico/phone.png"
-import langIco from "../../assets/ico/lang.png";
-import clock from "../../assets/ico/clock.png";
-import location from "../../assets/ico/location.png";
+import {FiPhone} from "react-icons/fi"
+import {BsClock, BsGlobe} from "react-icons/bs"
+import {IoLocationOutline} from "react-icons/io5"
 
 export default function Navbar() {
 
@@ -33,13 +32,13 @@ export default function Navbar() {
 
     const links3 = [
         {id: 1, name: 'Beauty salon', href: '#service'},
-        {id: 2, name: 'Aksessuarlar', href: '#portfolio'}
+        {id: 2, name: 'Аксессуары', href: '#portfolio'}
     ]
     const linksMd = [
         {id: 1, name: 'Свадебные платья', href: '#service'},
         {id: 2, name: 'Abaya Boutique', href: '#portfolio'},
         {id: 3, name: 'Beauty salon', href: '#contact'},
-        {id: 3, name: 'Aksessuarlar', href: '#contact'}
+        {id: 3, name: 'Аксессуары', href: '#contact'}
     ]
 
     const links4 = [
@@ -47,7 +46,7 @@ export default function Navbar() {
         {
             id: 2,
             name: <>
-                <img src={phone} alt="ico-phone"/>
+                <FiPhone fontSize={15}/>
                 +998 97 101 88-80
             </>,
             href: 'tel:+998 97 101 88-80'
@@ -55,7 +54,7 @@ export default function Navbar() {
         {
             id: 3,
             name: <>
-                <img src={langIco} alt="lang_item" className={"w-6"}/>
+                <BsGlobe fontSize={15}/>
                 Рус
             </>,
             href: 'tel:+998 97 101 88-80'
@@ -151,7 +150,7 @@ export default function Navbar() {
                             </div>
                             <div className={classes.social}>
                                 <ul>
-                                    {social.map(item => <li key={item.link}><a href={item.link}
+                                    {social.map((item, index) => <li key={index.toString()}><a href={item.link}
                                                                                target={"_blank"}>{item.name}</a></li>)}
                                 </ul>
                             </div>
@@ -159,13 +158,13 @@ export default function Navbar() {
                         <div className={classes.address}>
                             <p>
                                 <div>
-                                    <img src={clock} alt="clock-ico"/>
+                                    <BsClock fontSize={15}/>
                                 </div>
                                 Без выходных 10:00 - 19:00
                             </p>
                             <p>
                                 <div>
-                                    <img src={location} alt="location-ico"/>
+                                    <IoLocationOutline fontSize={15}/>
                                 </div>
                                 Ташкент, улица Мирза Голиб 1
                             </p>

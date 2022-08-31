@@ -1,11 +1,12 @@
 import React from 'react'
 import classes from "./header.module.scss"
 import head from "../../assets/png/head.png"
-import play from "../../assets/ico/play.png"
-import location from "../../assets/ico/location.png"
-import downUp from "../../assets/ico/downUp.svg"
-import clock from "../../assets/ico/clock.png"
-import phone from "../../assets/ico/phone.png";
+import {BsClock, BsPlay} from "react-icons/bs"
+import {GrLocation} from "react-icons/gr"
+import {FiPhone} from "react-icons/fi"
+import {BiChevronDown} from "react-icons/bi"
+import {CgMouse} from "react-icons/cg"
+import {IoLocationOutline} from "react-icons/io5";
 
 export default function Header() {
     return (
@@ -19,37 +20,27 @@ export default function Header() {
                     <span></span>
                 </button>
                 <div className={classes.play}>
-                    <p>Посмотреть видео</p>
-                    <img src={play} alt="play-ico"/>
+                    <div>Посмотреть видео</div>
+                    <BsPlay fontSize={25}/>
                 </div>
                 <div className={"flex items-center gap-2 md:hidden"}>
-                    <img src={phone} alt="ico-phone" className={"w-4"}/>
-                   <p className={"text-base"}>
+                    <FiPhone/>
+                   <text className={"text-base"}>
                        +998 97 101 88-80
-                   </p>
+                   </text>
                 </div>
             </div>
             <div className={classes['head-bottom']}>
                 <p>
-                    <img src={location} alt="location-ico"/>
+                    <IoLocationOutline/>
                     Ташкент, улица Мирза Голиб 1
                 </p>
                 <a href={"#brands"} className={classes.mouse}>
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         width="16" height="16"
-                         fill="currentColor" className="bi bi-mouse mouse-icon"
-                         viewBox="0 0 16 16">
-                        <path d="M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1
-                  0v-2A.5.5 0 0 1 8 3zm4 8a4 4 0 0 1-8 0V5a4 4 0 1
-                  1 8 0v6zM8 0a5 5 0 0 0-5 5v6a5 5 0 0 0 10 0V5a5 5
-                  0 0 0-5-5z"/>
-                    </svg>
-
-                    <img src={downUp} className="chevron-icon" alt="" />
-
+                    <CgMouse/>
+                    <BiChevronDown className={classes.img}/>
                 </a>
                 <p>
-                    <img src={clock} alt="clock-ico"/>
+                    <BsClock/>
                     Без выходных 10:00 - 19:00
                 </p>
             </div>

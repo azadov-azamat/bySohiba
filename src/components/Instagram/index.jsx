@@ -1,15 +1,27 @@
-import React from "react"
+import React, {useEffect, useState} from "react"
 import classes from "./instagram.module.scss"
 import {Col, Row} from "antd"
-import CardBrand from "../Brands/Card"
 import instagramIco from "../../assets/png/instagram.png"
-import right from "../../assets/ico/downRight.png"
+import logo from "../../assets/png/logo@.png"
 
 import {useSelector} from "react-redux";
+import {BsArrowRightShort} from "react-icons/bs"
 
 export default function Instagram(){
 
     const {instagram} = useSelector(state => state.variables)
+
+    const [width, setWidth] = useState(0)
+
+    useEffect(() => {
+        window.addEventListener('scroll', listenToScroll)
+    }, [])
+
+    const listenToScroll = () => {
+        const winScroll = window.innerWidth
+        setWidth(winScroll)
+    }
+
     return(
         <div className={classes.wrapper}>
             <div className={classes.title}>
@@ -18,14 +30,15 @@ export default function Instagram(){
             </div>
             <Row className={classes.row}>
                 {
-                    instagram.map(item=> <Col><img src={item.img} alt="img"/></Col>)
+                    instagram.slice(0, width < 805 ? 4 : 5).map(item=> <Col><img src={item.img} alt="img"/></Col>)
                 }
             </Row>
             <div className={classes.bottom}>
-                <button className={"flex items-center py-3 px-5 bg-primary_black rounded gap-3 text-primary_light"}>
+                <a href={"https://www.instagram.com/bysohiba_dev/"} target={"_blank"}>
                     Перейти в Instagram
-                    <img src={right} alt="" width={15}/>
-                </button>
+                    <BsArrowRightShort/>
+                </a>
+                <img src={logo} alt="logo" className={classes.logo} width={240}/>
             </div>
         </div>
     )

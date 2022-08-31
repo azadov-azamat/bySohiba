@@ -19,6 +19,7 @@ module.exports = {
         nav: "0 4px 10px rgba(0, 0, 0, 0.4)",
         service: '0px 4px 60px rgba(204, 193, 142, 0.1)',
         serviceBg: '0px 4px 60px rgba(212, 226, 213, 0.5)',
+        comments: '0px 4px 50px rgba(212, 226, 213, 0.2)',
         footer: '0px -1px 20px rgba(0, 0, 0, 0.5)'
       },
       dropShadow: {
@@ -28,6 +29,7 @@ module.exports = {
     colors: {
       primary_black: '#6C9392',
       primary_blackmd: '#7F7F7F',
+      primary_checkbox: '#D4E2D5',
       primary_text_black: 'rgb(18,59,58)',
       primary_light: 'rgb(255 255 255)',
       primary_yellow: '#CCC18E',

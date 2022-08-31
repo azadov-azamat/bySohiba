@@ -25,11 +25,12 @@
     }
 
     .play {
-      @apply flex items-center gap-4 cursor-pointer 2xl:text-lg xl:text-base opacity-80;
-
-      img {
-        @apply w-4;
+      @apply flex items-center justify-between gap-2 cursor-pointer;
+      font-family: 'Comfortaa', sans-serif;
+      div{
+        @apply 2xl:text-lg xl:text-base opacity-80 ;
       }
+
     }
   }
 
@@ -37,8 +38,8 @@
     @apply flex w-full md:justify-between justify-center items-center 2xl:px-52 xl:px-14 lg:px-7 px-6 pb-10;
     p {
       @apply hidden md:flex items-center gap-2 text-primary_light font-normal text-base leading-5 opacity-80;
-      img {
-        @apply w-4;
+      svg {
+        @apply w-4 text-primary_light;
       }
     }
 
@@ -52,21 +53,22 @@
         @apply text-primary_light w-8 h-12 opacity-50;
       }
 
-      img {
-        @apply w-4 absolute;
+      .img {
+        @apply w-6 absolute font-bold opacity-100;
+        transition: 0.5s;
         animation-name: chevronAnim;
         animation-duration: 2s;
         animation-iteration-count: infinite;
 
         @keyframes chevronAnim {
           from {
-            bottom: 30px;
-          }
-          50% {
             bottom: 15px;
           }
+          50% {
+            bottom: 3px;
+          }
           to {
-            bottom: 30px;
+            bottom: 15px;
           }
         }
 
