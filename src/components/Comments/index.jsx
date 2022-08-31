@@ -1,10 +1,11 @@
 import React from "react"
 import classes from "./comments.module.scss"
-import ListComments from "./ListComments";
+import ListComments from "./ListComments"
 import OwlCarousel from 'react-owl-carousel'
-import {useSelector} from "react-redux";
+import {useSelector} from "react-redux"
 import "./carousel.scss"
-import CreateComment from "./CreateComment";
+import CreateComment from "./CreateComment"
+import Title from "../Title"
 
 export default function Comments() {
 
@@ -38,9 +39,7 @@ export default function Comments() {
 
     return (
         <div className={classes.wrapper}>
-            <div className={classes.title}>
-                <p id={"brands"}>Дадим слова нашим клиентам</p>
-            </div>
+            <Title text={"Дадим слова нашим клиентам"}/>
             <div className={classes['owl-theme']}>
                 <OwlCarousel
                     loop

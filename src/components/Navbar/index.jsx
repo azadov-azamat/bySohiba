@@ -4,10 +4,12 @@ import logo from "../../assets/png/logo.png"
 import {FiPhone} from "react-icons/fi"
 import {BsClock, BsGlobe} from "react-icons/bs"
 import {IoLocationOutline} from "react-icons/io5"
+import {useSelector} from "react-redux";
 
 export default function Navbar() {
 
     const [position, setPosition] = useState(0)
+    const {social} = useSelector(state => state.variables)
 
     useEffect(() => {
         window.addEventListener('scroll', listenToScroll)
@@ -71,21 +73,6 @@ export default function Navbar() {
             value: "uz",
             name: 'Узб',
             name2: 'O`zbekcha'
-        }
-    ]
-
-    const social = [
-        {
-            link: "https://www.instagram.com/azadov_azamat",
-            name: 'Instagram'
-        },
-        {
-            link: "https://t.me/azamat_azadov",
-            name: 'Telegram'
-        },
-        {
-            link: "https://t.me/azamat_azadov",
-            name: 'Tik tok'
         }
     ]
 

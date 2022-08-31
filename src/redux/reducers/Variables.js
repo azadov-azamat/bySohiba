@@ -123,6 +123,20 @@ export const variablesSlice = createSlice({
                 stars: 5
             }
         ],
+        social: [
+            {
+                link: "https://www.instagram.com/azadov_azamat",
+                name: 'Instagram'
+            },
+            {
+                link: "https://t.me/azamat_azadov",
+                name: 'Telegram'
+            },
+            {
+                link: "https://t.me/azamat_azadov",
+                name: 'Tik tok'
+            }
+        ],
         current_page: null, // 0 page
         count_item: null, // 12
         total_elements: null, // 280

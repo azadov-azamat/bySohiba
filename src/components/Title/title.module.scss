@@ -1,0 +1,14 @@
+.title {
+  @apply w-full flex justify-center items-center text-xl xl:text-3xl lg:text-2xl uppercase pb-2;
+  font-family: 'shango-bold', sans-serif;
+
+  p {
+    @apply flex text-primary_text_black;
+    span {
+      @apply text-primary_yellow flex;
+      p {
+        @apply text-primary_yellow text-xl;
+      }
+    }
+  }
+}
