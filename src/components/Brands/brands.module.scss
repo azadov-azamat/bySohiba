@@ -16,7 +16,7 @@
   }
 
   .card {
-    @apply w-full flex items-center shadow shadow-service rounded cursor-pointer;
+    @apply w-full flex justify-between items-center shadow shadow-service rounded cursor-pointer lg:px-0 md:px-12 px-2;
     &:hover {
       .img{
         transform: scale(1.1);

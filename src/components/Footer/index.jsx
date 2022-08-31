@@ -81,7 +81,7 @@ export default function Footer(){
                         <div className={classes.img1}>
                             <img src={logo} alt=""/>
                         </div>
-                        <div className={classes.span}>“bySohiba” 2022. Все права защищены.</div>
+                        <div className={classes.span}>“bySohiba” {new Date().getFullYear()}. Все права защищены.</div>
                         <div className={classes.img2}>
                             <img src={logo} alt=""/>
                         </div>
