@@ -5,6 +5,12 @@
     @apply justify-center 2xl:gap-7 xl:gap-5 lg:gap-4 md:gap-3 gap-1;
     img {
       @apply 2xl:w-56 xl:w-52 lg:w-48 md:w-44 sm:w-40 w-36 rounded;
+      transition: 0.5s;
+      &:hover {
+        @apply rounded;
+        transform: scale(1.1);
+      }
+
     }
 
     .status {

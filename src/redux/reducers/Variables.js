@@ -152,15 +152,15 @@ export const variablesSlice = createSlice({
         ],
         catalog: [
             {id: 1, img: catalog1, type: "NEW"},
-            {id: 1, img: catalog2, type: "OLD"},
-            {id: 1, img: catalog3, type: "OLD"},
-            {id: 1, img: catalog4, type: "HAND"},
-            {id: 1, img: catalog5, type: "OLD"},
-            {id: 1, img: catalog6, type: "OLD"},
-            {id: 1, img: catalog7, type: "NEW"},
-            {id: 1, img: catalog8, type: "HAND"},
-            {id: 1, img: catalog9, type: "OLD"},
-            {id: 1, img: catalog10, type: "OLD"}
+            {id: 2, img: catalog2, type: "OLD"},
+            {id: 3, img: catalog3, type: "OLD"},
+            {id: 4, img: catalog4, type: "HAND"},
+            {id: 5, img: catalog5, type: "OLD"},
+            {id: 6, img: catalog6, type: "OLD"},
+            {id: 7, img: catalog7, type: "NEW"},
+            {id: 8, img: catalog8, type: "HAND"},
+            {id: 9, img: catalog9, type: "OLD"},
+            {id: 10, img: catalog10, type: "OLD"}
         ],
         current_page: null, // 0 page
         count_item: null, // 12

@@ -3,10 +3,14 @@ import classes from "./catalog.module.scss"
 import Title from "../Title"
 import {useSelector} from "react-redux"
 import {Col, Row} from "antd"
+import ImagePreview from "../ImagePreview"
 
 export default function Catalog() {
 
     const {catalog} = useSelector(state => state.variables)
+
+    const [isOpen, setIsOpen] = useState(false);
+    const [currentImg, setCurrentImg] = useState(1);
 
     const [width, setWidth] = useState(0)
 
@@ -33,12 +37,20 @@ export default function Catalog() {
         }
     }
 
+    function imagePreview(id) {
+        setCurrentImg(id - 1)
+        setTimeout(() => {
+            setIsOpen(true);
+        }, 500);
+    }
+
     return (
         <section className={classes.catalog} id={"catalog"}>
             <Title text={"каталог"}/>
             <Row className={classes.row}>
                 {
-                    catalog.map(item => <Col className={'relative overflow-hidden'}>
+                    catalog.map(item => <Col onClick={() => imagePreview(item.id)}
+                                             className={'relative overflow-hidden cursor-pointer'}>
                         <img src={item.img} alt="img"/>
                         {
                             item.type !== "OLD" && <>
@@ -48,6 +60,7 @@ export default function Catalog() {
                     </Col>)
                 }
             </Row>
+            {isOpen && <ImagePreview setOpen={setIsOpen} data={catalog} dataId={currentImg}/>}
             <div className={classes.btn}>
                 <button>Показать еще <span></span></button>
             </div>

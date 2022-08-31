@@ -13,6 +13,7 @@ import 'antd/dist/antd.css'
 import "react-toastify/dist/ReactToastify.css"
 import 'owl.carousel/dist/assets/owl.carousel.css'
 import 'owl.carousel/dist/assets/owl.theme.default.css'
+import "react-image-lightbox/style.css";
 
 import App from './App'
 import Spinner from "./components/Spinner"
