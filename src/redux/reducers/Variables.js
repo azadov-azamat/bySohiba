@@ -28,6 +28,19 @@ import img3 from "../../assets/delete/img_2.png"
 import img4 from "../../assets/delete/img_3.png"
 import img5 from "../../assets/delete/img_4.png"
 
+// ========== CATALOG ============
+
+import catalog1 from "../../assets/catalog/img.png"
+import catalog2 from "../../assets/catalog/img_1.png"
+import catalog3 from "../../assets/catalog/img_2.png"
+import catalog4 from "../../assets/catalog/img_3.png"
+import catalog5 from "../../assets/catalog/img_4.png"
+import catalog6 from "../../assets/catalog/img_5.png"
+import catalog7 from "../../assets/catalog/img_6.png"
+import catalog8 from "../../assets/catalog/img_7.png"
+import catalog9 from "../../assets/catalog/img_8.png"
+import catalog10 from "../../assets/catalog/img_9.png"
+
 export const variablesSlice = createSlice({
     name: 'variables',
     initialState: {
@@ -35,7 +48,7 @@ export const variablesSlice = createSlice({
             {
                 id: 1,
                 img: wedding,
-                title: 'Weddings',
+                title: 'Catalog',
                 text: 'свадебные платья'
             },
             {
@@ -136,6 +149,18 @@ export const variablesSlice = createSlice({
                 link: "https://t.me/azamat_azadov",
                 name: 'Tik tok'
             }
+        ],
+        catalog: [
+            {id: 1, img: catalog1, type: "NEW"},
+            {id: 1, img: catalog2, type: "OLD"},
+            {id: 1, img: catalog3, type: "OLD"},
+            {id: 1, img: catalog4, type: "HAND"},
+            {id: 1, img: catalog5, type: "OLD"},
+            {id: 1, img: catalog6, type: "OLD"},
+            {id: 1, img: catalog7, type: "NEW"},
+            {id: 1, img: catalog8, type: "HAND"},
+            {id: 1, img: catalog9, type: "OLD"},
+            {id: 1, img: catalog10, type: "OLD"}
         ],
         current_page: null, // 0 page
         count_item: null, // 12

@@ -1,0 +1,48 @@
+.catalog {
+  @apply w-full 2xl:px-52 xl:px-14 lg:px-7 px-6 2xl:pt-20 xl:pt-16 pt-10;
+
+  .row {
+    @apply justify-center 2xl:gap-7 xl:gap-5 lg:gap-4 md:gap-3 gap-1;
+    img {
+      @apply 2xl:w-56 xl:w-52 lg:w-48 md:w-44 sm:w-40 w-36 rounded;
+    }
+
+    .status {
+      @apply absolute bottom-7 -left-12;
+      transform: rotate(45deg);
+
+      span {
+        @apply w-full py-2 px-12 h-full text-xs tracking-wider;
+        font-family: 'Shango-Bold', sans-serif;
+      }
+
+      .new {
+        background: #F4D74F;
+      }
+
+      .hand {
+        background: #A8EC90;
+      }
+    }
+  }
+
+  .btn {
+    @apply flex justify-center pt-12;
+    button {
+      @apply 2xl:py-4 2xl:px-12 xl:py-3 xl:px-10 lg:py-2 lg:px-8 py-4 px-12 relative opacity-80 border border-primary_text_black text-primary_text_black font-normal text-base;
+      font-family: 'Comfortaa', sans-serif;
+      transition: 0.5s;
+
+      span {
+        @apply bg-primary_text_black absolute -z-10 top-0 bottom-0 left-1/2 right-1/2 opacity-0 group-hover:opacity-10 group-hover:right-0 group-hover:left-0;
+        transition: 0.5s;
+      }
+
+      &:hover {
+        span {
+          @apply opacity-20 right-0 left-0;
+        }
+      }
+    }
+  }
+}
