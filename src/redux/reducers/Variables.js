@@ -41,6 +41,13 @@ import catalog8 from "../../assets/catalog/img_7.png"
 import catalog9 from "../../assets/catalog/img_8.png"
 import catalog10 from "../../assets/catalog/img_9.png"
 
+// ========== VIDEO ============
+import video1 from "../../assets/video/video1.mp4"
+import video2 from "../../assets/video/video2.mp4"
+import video3 from "../../assets/video/video3.mp4"
+import video4 from "../../assets/video/video4.mp4"
+import video5 from "../../assets/video/video5.mp4"
+
 export const variablesSlice = createSlice({
     name: 'variables',
     initialState: {
@@ -48,7 +55,7 @@ export const variablesSlice = createSlice({
             {
                 id: 1,
                 img: wedding,
-                title: 'Catalog',
+                title: 'Video',
                 text: 'свадебные платья'
             },
             {
@@ -161,6 +168,13 @@ export const variablesSlice = createSlice({
             {id: 8, img: catalog8, type: "HAND"},
             {id: 9, img: catalog9, type: "OLD"},
             {id: 10, img: catalog10, type: "OLD"}
+        ],
+        videos: [
+            {id: 1, src: video1},
+            {id: 2, src: video2},
+            {id: 3, src: video3},
+            {id: 4, src: video4},
+            {id: 5, src: video5}
         ],
         current_page: null, // 0 page
         count_item: null, // 12

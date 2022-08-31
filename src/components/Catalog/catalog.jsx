@@ -49,7 +49,7 @@ export default function Catalog() {
             <Title text={"каталог"}/>
             <Row className={classes.row}>
                 {
-                    catalog.map(item => <Col onClick={() => imagePreview(item.id)}
+                    catalog.map(item => <Col key={item.id} onClick={() => imagePreview(item.id)}
                                              className={'relative overflow-hidden cursor-pointer'}>
                         <img src={item.img} alt="img"/>
                         {
