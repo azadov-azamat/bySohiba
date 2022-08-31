@@ -5,6 +5,8 @@ import {FiPhone} from "react-icons/fi"
 import {BsClock, BsGlobe} from "react-icons/bs"
 import {IoLocationOutline} from "react-icons/io5"
 import {useSelector} from "react-redux";
+import {Link} from "react-router-dom";
+import {defaultRoute} from "../../utils/constants";
 
 export default function Navbar() {
 
@@ -22,13 +24,13 @@ export default function Navbar() {
     }
 
     const links = [
-        {id: 1, name: 'Свадебные платья', href: '#service'},
+        {id: 1, name: 'Свадебные платья', href: '/weddings'},
         {id: 2, name: 'Abaya Boutique', href: '#portfolio'},
         {id: 3, name: 'Beauty salon', href: '#contact'}
     ]
 
     const links2 = [
-        {id: 1, name: 'Свадебные платья', href: '#service'},
+        {id: 1, name: 'Свадебные платья', href: '/weddings'},
         {id: 2, name: 'Abaya Boutique', href: '#portfolio'}
     ]
 
@@ -37,7 +39,7 @@ export default function Navbar() {
         {id: 2, name: 'Аксессуары', href: '#portfolio'}
     ]
     const linksMd = [
-        {id: 1, name: 'Свадебные платья', href: '#service'},
+        {id: 1, name: 'Свадебные платья', href: '/weddings'},
         {id: 2, name: 'Abaya Boutique', href: '#portfolio'},
         {id: 3, name: 'Beauty salon', href: '#contact'},
         {id: 3, name: 'Аксессуары', href: '#contact'}
@@ -80,22 +82,22 @@ export default function Navbar() {
         <nav className={classes.navbar}>
             <div className={'hidden xl:flex'}>
                 <ul className={classes['nav-ul']}>
-                    {links.map(link => <li key={link.id}><a href={link.href}>{link.name}</a>
+                    {links.map(link => <li key={link.id}><Link to={link.href}>{link.name}</Link>
                     </li>)}
                 </ul>
             </div>
 
             <div className={"md:block xl:hidden hidden"}>
                 <ul className={classes['nav-ul']}>
-                    {links2.map(link => <li key={link.id}><a href={link.href}>{link.name}</a>
+                    {links2.map(link => <li key={link.id}><Link to={link.href}>{link.name}</Link>
                     </li>)}
                 </ul>
             </div>
 
-            <div className={classes.logo}>
+            <Link to={defaultRoute} className={classes.logo}>
                 <img src={logo} alt="logo-name"/>
                 <p className={"uppercase"}>Weddings</p>
-            </div>
+            </Link>
 
 
             <div className={"hidden xl:flex"}>
@@ -108,7 +110,7 @@ export default function Navbar() {
 
             <div className={"md:block xl:hidden hidden"}>
                 <ul className={classes['nav-ul']}>
-                    {links3.map(link => <li key={link.id}><a href={link.href}>{link.name}</a>
+                    {links3.map(link => <li key={link.id}><Link to={link.href}>{link.name}</Link>
                     </li>)}
                 </ul>
             </div>
@@ -123,7 +125,7 @@ export default function Navbar() {
                 </div>
                 <div className={classes.menu}>
                     <ul className={classes['menu-ul']}>
-                        {linksMd.map(link => <li key={link.id}><a href={link.href}>{link.name}</a></li>)}
+                        {linksMd.map(link => <li key={link.id}><Link to={link.href}>{link.name}</Link></li>)}
                     </ul>
                     <div className={classes.variable}>
                         <div className={classes.setting}>
@@ -138,7 +140,8 @@ export default function Navbar() {
                             <div className={classes.social}>
                                 <ul>
                                     {social.map((item, index) => <li key={index.toString()}><a href={item.link}
-                                                                               target={"_blank"}>{item.name}</a></li>)}
+                                                                                               target={"_blank"}>{item.name}</a>
+                                    </li>)}
                                 </ul>
                             </div>
                         </div>

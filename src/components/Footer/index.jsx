@@ -2,7 +2,7 @@ import React from "react"
 import classes from "./footer.module.scss"
 import Title from "../Title"
 import logo from "../../assets/png/logo.png"
-import {useSelector} from "react-redux";
+import {useSelector} from "react-redux"
 
 export default function Footer(){
 

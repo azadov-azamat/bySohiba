@@ -34,7 +34,8 @@ module.exports = {
       primary_light: 'rgb(255 255 255)',
       primary_yellow: '#CCC18E',
       primary_form: 'rgba(196, 196, 196, 0.15)',
-      primary_header: 'rgba(0, 0, 0, 0.9)'
+      primary_header: 'rgba(0, 0, 0, 0.6)',
+      primary_page: 'rgba(120, 121, 106, 0.3)',
     },
     container: {
       center: true
