@@ -1,7 +1,7 @@
 #main-page {
   @apply relative;
   .div-main {
-    @apply w-full border h-screen bg-primary_light absolute z-[5000];
+    @apply w-full h-screen bg-primary_light absolute z-[5000];
     transition: 1s;
   }
 
