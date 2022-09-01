@@ -188,7 +188,11 @@ export const variablesSlice = createSlice({
             {id: 3, img: photoG3},
             {id: 4, img: photoG4}
         ],
-
+        filial: [
+            {id: 1, name: "Салон Чорсу", address: "Ташкент, Шайхантахурский район, Чорсу 2", orient: "ресторан Мумтоз", workTime: "Без выходных 10:00 - 19:00", phoneNumber: "+998 97 101 88-80"},
+            {id: 2, name: "Салон Беруний", address: "Ташкент, Алмазарский район, Фаробий 1", orient: "метро Беруний", workTime: "Без выходных 10:00 - 19:00", phoneNumber: "+998 97 750 88-80"}
+        ],
+        activeId: null,
         loadingPage: false,
         current_page: null, // 0 page
         count_item: null, // 12
@@ -198,10 +202,13 @@ export const variablesSlice = createSlice({
     reducers: {
         handleRefresh: (state, action) => {
             state.loadingPage = action.payload
+        },
+        handleSetId: (state, action) => {
+            state.activeId = action.payload
         }
     },
     extraReducers: {}
 })
 
-export const {handleRefresh} = variablesSlice.actions
+export const {handleRefresh, handleSetId} = variablesSlice.actions
 export default variablesSlice.reducer

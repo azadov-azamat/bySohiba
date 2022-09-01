@@ -1,12 +1,25 @@
-import React from "react"
+import React, {useEffect} from "react"
 import classes from "./footer.module.scss"
 import logo from "../../assets/png/logo.png"
-import {useSelector} from "react-redux"
+import {useDispatch, useSelector} from "react-redux"
 import Title from "../Constants/title"
+import {handleSetId} from "../../redux/reducers/Variables"
 
 export default function Footer(){
 
-    const {social} = useSelector(state => state.variables)
+    const dispatch = useDispatch()
+    const {social, filial, activeId} = useSelector(state => state.variables)
+
+    useEffect(()=>{
+        dispatch(handleSetId(0))
+    },[])
+
+   function changeLocation(id) {
+       dispatch(handleSetId(id))
+   }
+
+    console.log(filial[activeId])
+    console.log(activeId)
 
     return(
         <footer className={classes.footer}>
@@ -51,27 +64,28 @@ export default function Footer(){
                    </div>
                    <div className={classes.tex2}>
                         <div className={classes.nav}>
-                            <span>Салон Чорсу</span>
+                            {filial.map((item, index) => <div key={item?.id} className={activeId === index ? classes.active : classes['not-active']}
+                                                      onClick={()=> activeId !== index && dispatch(handleSetId(index))}>{item?.name}</div>)}
                         </div>
                        <div className={classes.data}>
                            <div className={classes.text}>
                                <span className={classes.p}>Адрес</span>
-                               <span>Ташкент, улица Лайлитог 97</span>
-                               <span>Ориентр реторан Мумтоз</span>
+                               <span>{filial[activeId]?.address}</span>
+                               <span>Ориентр: {filial[activeId]?.orient}</span>
                            </div>
                            <div className={classes.text}>
                                <span className={classes.p}>Время работы</span>
-                               <span>Без выходных 10:00 - 19:00</span>
+                               <span>{filial[activeId]?.workTime}</span>
                            </div>
                            <div className={classes.text}>
                                <span className={classes.p}>Номер телефона</span>
-                               <span><a href="tel:+998 97 101 88-80">+998 97 101 88-80</a></span>
+                               <span><a href={`tel:${filial[activeId]?.phoneNumber}`}>{filial[activeId]?.phoneNumber}</a></span>
                            </div>
                        </div>
                        <div className={classes.social}>
                            <ul>
-                               {social.map((item, index) => <li key={index.toString()}><a href={item.link}
-                                                                                          target={"_blank"}>{item.name}</a></li>)}
+                               {social.map((item, index) => <li key={index.toString()}><a href={item?.link}
+                                                                                          target={"_blank"}>{item?.name}</a></li>)}
                            </ul>
                        </div>
                    </div>

@@ -6,7 +6,7 @@ export default function Refresh({loading}) {
     return (
         <div id={"main-page"}>
             <div className={`div-main ${loading}`}>
-                <Spinner/>
+                {/*<Spinner/>*/}
             </div>
         </div>
     )
