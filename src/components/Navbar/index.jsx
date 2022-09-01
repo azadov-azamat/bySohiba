@@ -26,7 +26,7 @@ export default function Navbar() {
     const links = [
         {id: 1, name: 'Свадебные платья', href: '/weddings'},
         {id: 2, name: 'Abaya Boutique', href: '/abayas'},
-        {id: 3, name: 'Beauty salon', href: '#contact'}
+        {id: 3, name: 'Beauty salon', href: '/beauty'}
     ]
 
     const links2 = [
@@ -35,18 +35,18 @@ export default function Navbar() {
     ]
 
     const links3 = [
-        {id: 1, name: 'Beauty salon', href: '#service'},
-        {id: 2, name: 'Аксессуары', href: '#portfolio'}
+        {id: 1, name: 'Beauty salon', href: '/beauty'},
+        {id: 2, name: 'Аксессуары', href: '/accessories'}
     ]
     const linksMd = [
         {id: 1, name: 'Свадебные платья', href: '/weddings'},
         {id: 2, name: 'Abaya Boutique', href: '/abayas'},
-        {id: 3, name: 'Beauty salon', href: '#contact'},
-        {id: 3, name: 'Аксессуары', href: '#contact'}
+        {id: 3, name: 'Beauty salon', href: '/beauty'},
+        {id: 3, name: 'Аксессуары', href: '/accessories'}
     ]
 
     const links4 = [
-        {id: 1, name: <>Аксессуары</>, href: 'https://'},
+        {id: 1, name: <>Аксессуары</>, href: '/accessories'},
         {
             id: 2,
             name: <>

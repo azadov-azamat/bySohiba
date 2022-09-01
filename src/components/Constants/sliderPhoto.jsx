@@ -6,7 +6,7 @@ import {useSelector} from "react-redux"
 import Image from "../Image"
 import "./scss/pagination.scss"
 
-export default function Slider({title}) {
+export default function SliderPhoto({title}) {
 
     const {comments, catalog} = useSelector(state => state.variables)
     const responsive = {
@@ -34,7 +34,7 @@ export default function Slider({title}) {
     }
 
     return (
-        <section className={classes.slider}>
+        <section className={classes.slider} id={"slider-photo"}>
             <Title text={title}/>
             <div className={classes['owl-theme']}>
                 <OwlCarousel

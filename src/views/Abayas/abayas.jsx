@@ -16,9 +16,10 @@ export default function Abayas() {
             <About.abayas/>
             <Photos/>
             <Constant.catalog title={"Abaya платья"} data={catalog}/>
-            <Constant.slider title={"Обувь"}/>
-            <Constant.slider title={"аксессуары"}/>
-            <Constant.video title={"Видеоблог"} data={videos}/>
+            <Constant.sliderPhoto title={"Обувь"}/>
+            <Constant.sliderPhoto title={"аксессуары"}/>
+            <Constant.sliderVideo title={"Видеоблог"} data={videos}/>
+            {/*<Constant.video title={"Видеоблог"} data={videos}/>*/}
         </>
     )
 }

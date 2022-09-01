@@ -19,7 +19,7 @@ export default function Image({item}){
 
     return(
         <>
-            <img src={item.img} alt="img"/>
+            <img src={item.img} alt="img" id={"image"}/>
             {
                 item.type !== "OLD" && <>
                     <div className={"status"}>{status(item.type)}</div>

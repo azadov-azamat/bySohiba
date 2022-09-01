@@ -1,7 +1,8 @@
 import {defaultRoute} from "../utils/constants.js"
 import Home from "../views/Home/index.jsx"
 import Weddings from "../views/Weddings"
-import Abayas from "../views/Abayas";
+import Abayas from "../views/Abayas"
+import Beauty from "../views/Beauty"
 
 const routes = [
     {
@@ -17,10 +18,16 @@ const routes = [
         component: Weddings
     },
     {
-        id: 2,
+        id: 3,
         name: 'Abayas',
         path: "/abayas",
         component: Abayas
+    },
+    {
+        id: 4,
+        name: 'Beauty',
+        path: "/beauty",
+        component: Beauty
     }
 ]
 
