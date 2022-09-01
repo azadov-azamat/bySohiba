@@ -24,9 +24,9 @@ export default function Landing() {
                 </div>
                 <div className={"flex items-center gap-2 md:hidden"}>
                     <FiPhone/>
-                    <text className={"text-base"}>
+                    <div className={"text-base"}>
                         +998 97 101 88-80
-                    </text>
+                    </div>
                 </div>
             </div>
             <div className={classes['head-bottom']}>

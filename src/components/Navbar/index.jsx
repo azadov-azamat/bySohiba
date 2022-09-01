@@ -11,6 +11,8 @@ import {defaultRoute} from "../../utils/constants"
 export default function Navbar() {
 
     const [position, setPosition] = useState(0)
+    const [width, setWidth] = useState(0)
+
     const {social} = useSelector(state => state.variables)
 
     useEffect(() => {
@@ -18,9 +20,11 @@ export default function Navbar() {
     }, [])
 
     const listenToScroll = () => {
-        const winScroll =
-            document.body.scrollTop || document.documentElement.scrollTop
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop
         setPosition(winScroll)
+
+        const winWidth = window.innerWidth
+        setWidth(winWidth)
     }
 
     const links = [
@@ -42,7 +46,7 @@ export default function Navbar() {
         {id: 1, name: 'Свадебные платья', href: '/weddings'},
         {id: 2, name: 'Abaya Boutique', href: '/abayas'},
         {id: 3, name: 'Beauty salon', href: '/beauty'},
-        {id: 3, name: 'Аксессуары', href: '/accessories'}
+        {id: 4, name: 'Аксессуары', href: '/accessories'}
     ]
 
     const links4 = [
@@ -115,8 +119,7 @@ export default function Navbar() {
                 </ul>
             </div>
 
-            <div className={position !== 0 ? classes.toggle + " fixed flex justify-center items-center" +
-                " w-14 h-14 rounded-full top-[15px] bg-primary_black right-1 z-50" : classes.toggle}>
+            <div className={classes.toggle}>
                 <input className={classes.checkbox} type="checkbox" name="" id=""/>
                 <div className={classes['hamburger-lines']}>
                     <span className={classes.line1}></span>
@@ -131,7 +134,7 @@ export default function Navbar() {
                         <div className={classes.setting}>
                             <div className={classes.lang}>
                                 {languages.map((item, index) =>
-                                    <button>
+                                    <button key={index.toString()}>
                                         {item.name2}
                                         <span></span>
                                     </button>

@@ -3,7 +3,7 @@ import Home from "../views/Home/index.jsx"
 import Weddings from "../views/Weddings"
 import Abayas from "../views/Abayas"
 import Beauty from "../views/Beauty"
-import Accessories from "../views/Accessories";
+import Accessories from "../views/Accessories"
 
 const routes = [
     {

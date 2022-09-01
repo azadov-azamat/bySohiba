@@ -1,6 +1,6 @@
 .navbar {
   @apply w-full h-20 2xl:h-20 lg:h-16 2xl:px-52 xl:px-14 lg:px-7 px-6
-  flex items-center md:justify-between justify-center  absolute;
+  flex items-center md:justify-between justify-center fixed;
   font-family: 'Comfortaa', sans-serif;
 
   .logo {

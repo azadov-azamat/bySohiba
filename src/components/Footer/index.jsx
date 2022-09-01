@@ -46,7 +46,7 @@ export default function Footer(){
                                Bridal Salon in Tashkent
                            </a>
                            <iframe src="https://yandex.uz/map-widget/v1/-/CCUVUIgJ8C" frameBorder="1"
-                                   allowFullScreen="true"></iframe>
+                                   allowFullScreen={true}></iframe>
                        </div>
                    </div>
                    <div className={classes.tex2}>

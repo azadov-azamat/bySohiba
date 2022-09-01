@@ -49,7 +49,7 @@ export default function Comments() {
                     smartSpeed={500}
                 >
                     {comments.map((item, index) => (
-                        <ListComments key={item.id} name={item.name} text={item.text} stars={item.stars}/>
+                        <ListComments key={index.toString()} name={item.name} text={item.text} stars={item.stars}/>
                     ))}
                 </OwlCarousel>
             </div>

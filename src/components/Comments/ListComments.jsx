@@ -4,7 +4,7 @@ import {AiTwotoneStar} from "react-icons/ai"
 import commentImg from "../../assets/ico/comment.png"
 import {RiSingleQuotesR} from "react-icons/ri"
 
-export default function ListComments({key, name, text, stars}) {
+export default function ListComments({name, text, stars}) {
 
     const starsData = Array.from(Array(stars).keys())
 
