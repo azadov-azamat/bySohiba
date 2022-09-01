@@ -1,5 +1,21 @@
+#main-page {
+  @apply relative;
+  .div-main {
+    @apply w-full border h-screen bg-primary_light absolute z-[5000];
+    transition: 1s;
+  }
+
+  .false {
+    @apply left-0 top-0;
+  }
+
+  .true {
+    @apply left-[-2000px] top-0;
+  }
+}
+
 .fallback-spinner {
-  background-color: #0e2431;
+  //background-color: #0e2431;
   height: 100%;
   display: flex;
   align-items: center;
@@ -8,6 +24,7 @@
   &.app-loader {
     height: 100vh;
     flex-direction: column;
+
     .loading {
       margin-top: 1rem;
     }

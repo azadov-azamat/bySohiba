@@ -188,14 +188,20 @@ export const variablesSlice = createSlice({
             {id: 3, img: photoG3},
             {id: 4, img: photoG4}
         ],
+
+        loadingPage: false,
         current_page: null, // 0 page
         count_item: null, // 12
         total_elements: null, // 280
         isLoading: false
     },
-    reducers: {},
+    reducers: {
+        handleRefresh: (state, action) => {
+            state.loadingPage = action.payload
+        }
+    },
     extraReducers: {}
 })
 
-export const {} = variablesSlice.actions
+export const {handleRefresh} = variablesSlice.actions
 export default variablesSlice.reducer

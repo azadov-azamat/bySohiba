@@ -4,17 +4,18 @@ import logo from "../../assets/png/logo.png"
 import {FiPhone} from "react-icons/fi"
 import {BsClock, BsGlobe} from "react-icons/bs"
 import {IoLocationOutline} from "react-icons/io5"
-import {useSelector} from "react-redux"
+import {useDispatch, useSelector} from "react-redux"
 import {Link, useLocation} from "react-router-dom"
 import {defaultRoute} from "../../utils/constants"
+import {handleRefresh} from "../../redux/reducers/Variables"
 
 export default function Navbar() {
 
+    const dispatch = useDispatch()
     const location = useLocation()
     const path = location.pathname
 
     const [position, setPosition] = useState(0)
-    const [width, setWidth] = useState(0)
 
     const {social} = useSelector(state => state.variables)
 
@@ -25,9 +26,6 @@ export default function Navbar() {
     const listenToScroll = () => {
         const winScroll = document.body.scrollTop || document.documentElement.scrollTop
         setPosition(winScroll)
-
-        const winWidth = window.innerWidth
-        setWidth(winWidth)
     }
 
     const links = [
@@ -59,7 +57,8 @@ export default function Navbar() {
                 <FiPhone fontSize={15}/>
                 +998 97 101 88-80
             </>,
-            href: 'tel:+998 97 101 88-80'
+            href: 'tel:+998 97 101 88-80',
+            onClick: () => console.log("phone...")
         },
         {
             id: 2,
@@ -67,7 +66,8 @@ export default function Navbar() {
                 <BsGlobe fontSize={15}/>
                 Рус
             </>,
-            href: 'tel:+998 97 101 88-80'
+            href: 'tel:+998 97 101 88-80',
+            onClick: changeLang
         }
     ]
 
@@ -83,6 +83,13 @@ export default function Navbar() {
             name2: 'O`zbekcha'
         }
     ]
+
+    function changeLang() {
+        dispatch(handleRefresh(false))
+        setTimeout(() => {
+            dispatch(handleRefresh(true))
+        }, 2000);
+    }
 
     return (
         <nav className={position !== 0 || path === "/accessories" ? classes['nav-scroll'] : classes.navbar}>
@@ -110,7 +117,7 @@ export default function Navbar() {
                 <ul className={classes['nav-ul']}>
                     <li><Link to={'/accessories'} className={"flex items-center gap-2"}>Аксессуары</Link></li>
                     {links4.map(link => <li key={link.id}><a className={"flex items-center gap-2"}
-                                                             href={link.href}>{link.name}</a>
+                                                             href={link.href} onClick={link.onClick}>{link.name}</a>
                     </li>)}
                 </ul>
             </div>
