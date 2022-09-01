@@ -5,7 +5,7 @@ import OwlCarousel from 'react-owl-carousel'
 import {useSelector} from "react-redux"
 import "./carousel.scss"
 import CreateComment from "./CreateComment"
-import Title from "../Title"
+import Title from "../Constants/title"
 
 export default function Comments() {
 

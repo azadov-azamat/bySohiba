@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import Lightbox from "react-image-lightbox"
-import classes from "../Catalog/catalog.module.scss";
 
 export default function ImagePreview({data, dataId, setOpen}){
 

@@ -30,7 +30,8 @@ export default function Instagram(){
             </div>
             <Row className={classes.row}>
                 {
-                    instagram.slice(0, width < 805 ? 4 : 5).map(item=> <Col><img src={item.img} alt="img"/></Col>)
+                    instagram.slice(0, width < 805 ? 4 : 5).map(item=> <Col>
+                        <img src={item.img} alt="img"/></Col>)
                 }
             </Row>
             <div className={classes.bottom}>

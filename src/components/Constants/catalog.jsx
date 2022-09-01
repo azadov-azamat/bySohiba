@@ -1,13 +1,11 @@
 import React, {useEffect, useState} from "react"
-import classes from "./catalog.module.scss"
-import Title from "../Title"
-import {useSelector} from "react-redux"
+import classes from "./scss/catalog.module.scss"
 import {Col, Row} from "antd"
 import ImagePreview from "../ImagePreview"
+import Title from "./title";
+import Image from "../Image";
 
-export default function Catalog() {
-
-    const {catalog} = useSelector(state => state.variables)
+export default function Catalog({title, data}) {
 
     const [isOpen, setIsOpen] = useState(false);
     const [currentImg, setCurrentImg] = useState(1);
@@ -46,21 +44,16 @@ export default function Catalog() {
 
     return (
         <section className={classes.catalog} id={"catalog"}>
-            <Title text={"каталог"}/>
+            <Title text={title}/>
             <Row className={classes.row}>
                 {
-                    catalog.map(item => <Col key={item.id} onClick={() => imagePreview(item.id)}
-                                             className={'relative overflow-hidden cursor-pointer'}>
-                        <img src={item.img} alt="img"/>
-                        {
-                            item.type !== "OLD" && <>
-                                <div className={classes.status}>{status(item.type)}</div>
-                            </>
-                        }
+                    data.map(item => <Col key={item.id} onClick={() => imagePreview(item.id)}
+                                          className={'relative overflow-hidden cursor-pointer'}>
+                        <Image item={item}/>
                     </Col>)
                 }
             </Row>
-            {isOpen && <ImagePreview setOpen={setIsOpen} data={catalog} dataId={currentImg}/>}
+            {isOpen && <ImagePreview setOpen={setIsOpen} data={data} dataId={currentImg}/>}
             <div className={classes.btn}>
                 <button>Показать еще <span></span></button>
             </div>

@@ -48,6 +48,12 @@ import video3 from "../../assets/video/video3.mp4"
 import video4 from "../../assets/video/video4.mp4"
 import video5 from "../../assets/video/video5.mp4"
 
+// ========== VIDEO ============
+import photoG1 from "../../assets/photoGallery/img.png"
+import photoG2 from "../../assets/photoGallery/img_1.png"
+import photoG3 from "../../assets/photoGallery/img_2.png"
+import photoG4 from "../../assets/photoGallery/img_3.png"
+
 export const variablesSlice = createSlice({
     name: 'variables',
     initialState: {
@@ -175,6 +181,12 @@ export const variablesSlice = createSlice({
             {id: 3, src: video3},
             {id: 4, src: video4},
             {id: 5, src: video5}
+        ],
+        photosAbaya: [
+            {id: 1, img: photoG1},
+            {id: 2, img: photoG2},
+            {id: 3, img: photoG3},
+            {id: 4, img: photoG4}
         ],
         current_page: null, // 0 page
         count_item: null, // 12

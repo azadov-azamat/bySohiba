@@ -16,6 +16,9 @@
     @apply justify-center;
     img {
       @apply w-56 md:w-64;
+      &:hover {
+        transform: scale(1);
+      }
     }
   }
 

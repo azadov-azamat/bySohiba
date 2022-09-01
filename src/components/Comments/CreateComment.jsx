@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import classes from "./comments.module.scss"
-import commentImg from "../../assets/ico/comment.png";
-import {AiTwotoneStar} from "react-icons/ai";
+import commentImg from "../../assets/ico/comment.png"
+import {AiTwotoneStar} from "react-icons/ai"
 
 export default function CreateComment() {
 

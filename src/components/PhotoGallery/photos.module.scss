@@ -1,0 +1,14 @@
+.photo-gallery {
+  @apply w-full 2xl:px-52 xl:px-14 lg:px-7 px-6 2xl:pt-20 xl:pt-16 pt-10 2xl:pb-20 xl:pb-16 pb-10;
+
+  .row {
+    @apply justify-between;
+    .col {
+      @apply 2xl:pt-7 xl:pt-5 lg:pt-4 md:pt-3 pt-1;
+      img{
+        @apply w-full;
+        transform: scale(1);
+      }
+    }
+  }
+}
