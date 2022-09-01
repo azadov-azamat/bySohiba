@@ -5,10 +5,13 @@ import {FiPhone} from "react-icons/fi"
 import {BsClock, BsGlobe} from "react-icons/bs"
 import {IoLocationOutline} from "react-icons/io5"
 import {useSelector} from "react-redux"
-import {Link} from "react-router-dom"
+import {Link, useLocation} from "react-router-dom"
 import {defaultRoute} from "../../utils/constants"
 
 export default function Navbar() {
+
+    const location = useLocation()
+    const path = location.pathname
 
     const [position, setPosition] = useState(0)
     const [width, setWidth] = useState(0)
@@ -82,7 +85,7 @@ export default function Navbar() {
     ]
 
     return (
-        <nav className={classes.navbar}>
+        <nav className={position !== 0 || path === "/accessories" ? classes['nav-scroll'] : classes.navbar}>
             <div className={'hidden xl:flex'}>
                 <ul className={classes['nav-ul']}>
                     {links.map(link => <li key={link.id}><Link to={link.href}>{link.name}</Link>

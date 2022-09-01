@@ -9,9 +9,9 @@ export default function Brands() {
     const {service} = useSelector(state => state.variables)
 
     return (
-        <div className={classes.wrapper}>
+        <div className={classes.wrapper} id={"brands"}>
             <div className={classes.title}>
-                <p id={"brands"}><span><p>by</p>sohiba </span>&nbsp; предлагает вам <br className={"block sm:hidden"}/> следующие Бренды</p>
+                <p><span><p>by</p>sohiba </span>&nbsp; предлагает вам <br className={"block sm:hidden"}/> следующие Бренды</p>
             </div>
             <Row className={"pb-16 gap-5 justify-center"}>
                 {
