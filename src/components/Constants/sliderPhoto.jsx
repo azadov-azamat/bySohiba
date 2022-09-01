@@ -6,35 +6,31 @@ import {useSelector} from "react-redux"
 import Image from "../Image"
 import "./scss/pagination.scss"
 
+import pattern1 from "../../assets/png/bg/pattern1.png"
+import pattern2 from "../../assets/png/bg/pattern2.png"
+
 export default function SliderPhoto({title}) {
 
-    const {comments, catalog} = useSelector(state => state.variables)
+    const {catalog} = useSelector(state => state.variables)
+
     const responsive = {
         0: {
-            items: 1
-        },
-        600: {
-            items: 1.5
-        },
-        640: {
-            items: 2
-        },
-        950: {
             items: 3
         },
-        1024: {
-            items: 2
-        },
-        1200: {
+        600: {
             items: 4
         },
-        1300: {
+        950: {
             items: 5
         }
     }
 
     return (
         <section className={classes.slider} id={"slider-photo"}>
+            <div className="w-full">
+                <img src={pattern1} alt="" width={250} className={"flex absolute -top-36"}/>
+                <img src={pattern2} alt="" width={280} className={"flex absolute left-1/4 -top-44"}/>
+            </div>
             <Title text={title}/>
             <div className={classes['owl-theme']}>
                 <OwlCarousel

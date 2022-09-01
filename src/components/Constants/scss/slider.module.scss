@@ -1,5 +1,5 @@
 .slider {
-  @apply pb-16;
+  @apply pb-16 relative;
 
   .owl-theme {
     @apply 2xl:px-52 xl:px-14 lg:px-7 px-6;
