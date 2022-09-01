@@ -1,13 +1,13 @@
 .wrapper {
   @apply w-full pt-36 2xl:px-52 xl:px-14 lg:px-7 px-6;
   .title {
-    @apply w-full flex justify-center items-center text-xl xl:text-3xl lg:text-2xl uppercase pb-10;
+    @apply w-full flex justify-center items-center text-center text-xl xl:text-3xl lg:text-2xl uppercase pb-10;
     font-family: 'shango-bold', sans-serif;
 
     p {
-      @apply flex text-primary_text_black;
+      @apply flex text-primary_text_black text-center;
       span {
-        @apply text-primary_yellow flex;
+        @apply text-primary_yellow flex text-center;
         p {
           @apply text-primary_yellow text-xl;
         }
@@ -17,9 +17,15 @@
 
   .card {
     @apply w-full flex justify-between items-center shadow shadow-service rounded cursor-pointer lg:px-0 md:px-12 px-2;
+    .img-brand{
+      .bg{
+        @apply w-96 h-96;
+        border-radius: 41% 80% 100% 30% / 84% 100% 14% 23% ;
+      }
+    }
     &:hover {
       .img{
-        transform: scale(1.1);
+        transform: scale(1.05);
       }
     }
     .img {

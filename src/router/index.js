@@ -3,6 +3,7 @@ import Home from "../views/Home/index.jsx"
 import Weddings from "../views/Weddings"
 import Abayas from "../views/Abayas"
 import Beauty from "../views/Beauty"
+import Accessories from "../views/Accessories";
 
 const routes = [
     {
@@ -28,6 +29,12 @@ const routes = [
         name: 'Beauty',
         path: "/beauty",
         component: Beauty
+    },
+    {
+        id: 5,
+        name: 'Accessories',
+        path: "/accessories",
+        component: Accessories
     }
 ]
 

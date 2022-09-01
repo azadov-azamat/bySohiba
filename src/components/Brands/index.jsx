@@ -11,7 +11,7 @@ export default function Brands() {
     return (
         <div className={classes.wrapper}>
             <div className={classes.title}>
-                <p id={"brands"}><span><p>by</p>sohiba </span>&nbsp; предлагает вам следующие Бренды</p>
+                <p id={"brands"}><span><p>by</p>sohiba </span>&nbsp; предлагает вам <br className={"block sm:hidden"}/> следующие Бренды</p>
             </div>
             <Row className={"pb-16 gap-5 justify-center"}>
                 {

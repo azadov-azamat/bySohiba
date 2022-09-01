@@ -10,8 +10,10 @@ export default function Weddings() {
             <div className={classes.text}>
                 <div className={classes.title}>
                     <div className={classes.h1}>
-                        <span>Свадебные платья от бренда</span>
-                        <img src={logo} alt=""/>
+                       <div className="flex gap-2">
+                           <span>Свадебные платья от бренда</span>
+                           <img src={logo} alt=""/>
+                       </div>
                     </div>
                     <div className={classes.span}></div>
                 </div>

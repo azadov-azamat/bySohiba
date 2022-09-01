@@ -46,9 +46,8 @@ export default function Navbar() {
     ]
 
     const links4 = [
-        {id: 1, name: <>Аксессуары</>, href: '/accessories'},
         {
-            id: 2,
+            id: 1,
             name: <>
                 <FiPhone fontSize={15}/>
                 +998 97 101 88-80
@@ -56,7 +55,7 @@ export default function Navbar() {
             href: 'tel:+998 97 101 88-80'
         },
         {
-            id: 3,
+            id: 2,
             name: <>
                 <BsGlobe fontSize={15}/>
                 Рус
@@ -102,6 +101,7 @@ export default function Navbar() {
 
             <div className={"hidden xl:flex"}>
                 <ul className={classes['nav-ul']}>
+                    <li><Link to={'/accessories'} className={"flex items-center gap-2"}>Аксессуары</Link></li>
                     {links4.map(link => <li key={link.id}><a className={"flex items-center gap-2"}
                                                              href={link.href}>{link.name}</a>
                     </li>)}
