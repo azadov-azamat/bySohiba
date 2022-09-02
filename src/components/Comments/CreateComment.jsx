@@ -1,13 +1,13 @@
 import React, {useState} from "react"
 import classes from "./comments.module.scss"
 import commentImg from "../../assets/ico/comment.png"
-import {AiTwotoneStar} from "react-icons/ai"
+import {AiFillStar, AiTwotoneStar} from "react-icons/ai"
 
 export default function CreateComment() {
 
     const [textLength, setTextLength] = useState(0)
 
-    const starsData = Array.from(Array(5).keys())
+    const [stars, setStars] = useState(0)
 
     return (
         <div className={classes.create}>
@@ -18,7 +18,8 @@ export default function CreateComment() {
             <form className={classes['type-comment']}>
                 <div className={classes.textarea}>
                     <textarea name="comment" id="comment" maxLength={"300"} style={{resize: 'none'}}
-                              placeholder={"Написать комментарий..."} onChange={(e)=> setTextLength((e.target.value).length)}/>
+                              placeholder={"Написать комментарий..."}
+                              onChange={(e) => setTextLength((e.target.value).length)}/>
                     <span>{textLength}/300</span>
                 </div>
                 <div className={classes.name}>
@@ -28,7 +29,9 @@ export default function CreateComment() {
                         <span>согласие на обработку данных</span>
                     </label>
                     <div className={classes.stars}>
-                        {starsData.map((item, index) => <AiTwotoneStar key={index}/>)}
+                        {[1, 2, 3, 4, 5].map((index) => <AiFillStar key={index}
+                                                                    style={stars >= index ? {color: '#6C9392'} : {color: "#D9D9D9"}}
+                                                                    onClick={() => setStars(index)}/>)}
                     </div>
                     <button>Отправка</button>
                 </div>
