@@ -24,7 +24,7 @@ export default function Instagram(){
 
     return(
         <div className={classes.wrapper}>
-            <div className={classes.title}>
+            <div className={classes.title} data-aos="fade-up">
                 <img src={instagramIco} alt="instagram-ico"/>
                 <p>Подпишитесь на наш инстаграм, чтобы быть в курсе о новых коллекций и скидок</p>
             </div>

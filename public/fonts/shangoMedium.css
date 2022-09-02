@@ -1,4 +1,7 @@
 @font-face {
     font-family: "shango-medium-2";
-    src: url("https://blogfonts.com/fonts/s/830/152830/file/Shango Medium.otf") format("woff"), url("https://blogfonts.com/fonts/s/830/152830/file/Shango Medium.otf") format("opentype"), url("https://blogfonts.com/fonts/s/830/152830/file/Shango Medium.otf") format("truetype");
+    src: url("./otf/Shango Medium.otf");,
+    src: url("./otf/Shango Medium.otf?#iefix") format("woff"),
+    url("./otf/Shango Medium.otf") format("opentype"),
+    url("./otf/Shango Medium.otf") format("truetype");
 }

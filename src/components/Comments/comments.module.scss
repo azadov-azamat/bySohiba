@@ -3,7 +3,7 @@
 
   .title {
     @apply w-full flex justify-center items-center text-xl xl:text-3xl lg:text-2xl uppercase pb-2;
-    font-family: 'shango-bold', sans-serif;
+    font-family: 'shango-bold';
 
     p {
       @apply flex text-primary_text_black;
@@ -34,7 +34,7 @@
 
         .p-text {
           @apply w-full font-light text-base text-primary_black;
-          font-family: 'Comfortaa', sans-serif;
+          font-family: 'Comfortaa';
         }
 
         .owner {
@@ -48,7 +48,7 @@
 
           .name {
             @apply font-medium text-base text-primary_black;
-            font-family: 'Comfortaa', sans-serif;
+            font-family: 'Comfortaa';
           }
         }
       }
@@ -62,7 +62,7 @@
       @apply w-[35%] relative overflow-hidden hidden xl:block;
       span {
         @apply text-primary_text_black text-3xl tracking-wider;
-        font-family: 'Shango-Bold', sans-serif;
+        font-family: 'Shango-Bold';
       }
 
       img {
@@ -85,7 +85,7 @@
 
       textarea, input {
         @apply border border-primary_black rounded text-[#7F7F7F];
-        font-family: 'Comfortaa', sans-serif;
+        font-family: 'Comfortaa';
 
         &:focus {
           border: 1px solid #6C9392 !important;
@@ -96,7 +96,7 @@
         @apply flex flex-col md:w-[37%] w-full md:pt-0 pt-4 gap-4 pb-0;
         label {
           @apply flex items-center font-normal text-sm text-primary_black gap-2 cursor-pointer;
-          font-family: 'Comfortaa', sans-serif;
+          font-family: 'Comfortaa';
 
           span{
             @apply mx-2;
@@ -115,7 +115,7 @@
         }
         button{
           @apply w-full py-3 flex justify-center items-center bg-primary_black rounded text-primary_light;
-          font-family: 'Comfortaa', sans-serif;
+          font-family: 'Comfortaa';
         }
       }
     }

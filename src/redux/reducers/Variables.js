@@ -192,7 +192,21 @@ export const variablesSlice = createSlice({
             {id: 1, name: "Салон Чорсу", address: "Ташкент, Шайхантахурский район, Чорсу 2", orient: "ресторан Мумтоз", workTime: "Без выходных 10:00 - 19:00", phoneNumber: "+998 97 101 88-80"},
             {id: 2, name: "Салон Беруний", address: "Ташкент, Алмазарский район, Фаробий 1", orient: "метро Беруний", workTime: "Без выходных 10:00 - 19:00", phoneNumber: "+998 97 750 88-80"}
         ],
-        activeId: null,
+        languages: [
+            {
+                id: 1,
+                value: "ru",
+                name: 'Рус',
+                name2: 'Русский'
+            },
+            {
+                id: 2,
+                value: "uz",
+                name: 'Узб',
+                name2: 'O`zbekcha'
+            }
+        ],
+        activeId: 0,
         loadingPage: false,
         current_page: null, // 0 page
         count_item: null, // 12

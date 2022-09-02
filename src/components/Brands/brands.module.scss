@@ -2,7 +2,7 @@
   @apply w-full pt-36 2xl:px-52 xl:px-14 lg:px-7 px-6;
   .title {
     @apply w-full flex justify-center items-center text-center text-xl xl:text-3xl lg:text-2xl uppercase pb-10;
-    font-family: 'shango-bold', sans-serif;
+    font-family: 'shango-bold';
 
     p {
       @apply flex text-primary_text_black text-center;
@@ -43,13 +43,13 @@
 
         p {
           @apply font-normal text-lg uppercase text-primary_blackmd;
-          font-family: 'Shango-Medium', sans-serif;
+          font-family: 'Shango-Medium';
         }
       }
 
       p {
         @apply text-xl text-primary_text_black;
-        font-family: 'shango-medium-2', sans-serif;
+        font-family: 'shango-medium-2';
       }
     }
   }

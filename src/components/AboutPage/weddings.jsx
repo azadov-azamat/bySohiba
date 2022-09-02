@@ -8,7 +8,7 @@ export default function Weddings() {
     return (
         <section className={classes['about-page']} id={"about"}>
             <div className={classes.text}>
-                <div className={classes.title}>
+                <div className={classes.title} data-aos="fade-up">
                     <div className={classes.h1}>
                        <div className="flex gap-2">
                            <span>Свадебные платья от бренда</span>

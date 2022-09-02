@@ -7,18 +7,18 @@ import * as Header from "../../components/Header"
 
 export default function Home() {
 
-    // useEffect(() => {
-    //     AOS.init({
-    //         duration: 1000
-    //     });
-    // }, [])
+    useEffect(() => {
+        AOS.init({
+            duration: 1000
+        });
+    }, [])
 
     return (
         <>
             <Header.landing/>
             <Brands/>
-            <Instagram/>
-            <Comments/>
+            {/*<Instagram/>*/}
+            {/*<Comments/>*/}
         </>
     )
 }

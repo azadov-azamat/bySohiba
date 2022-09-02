@@ -1,153 +1,8 @@
 .navbar {
   @apply w-full h-20 2xl:h-20 lg:h-16 2xl:px-52 xl:px-14 lg:px-7 px-6
   flex items-center md:justify-between justify-center fixed;
-  font-family: 'Comfortaa', sans-serif;
+  font-family: 'Comfortaa';
   transition: 0.5s;
-}
-
-.nav-scroll {
-  @apply w-full h-16 2xl:h-20 lg:h-16 2xl:px-52 xl:px-14 lg:px-7 px-6
-  flex items-center md:justify-between justify-center fixed bg-primary_light z-50 text-primary_text_black;
-  font-family: 'Comfortaa', sans-serif;
-  transition: 0.5s;
-  .nav-ul {
-    li {
-      a {
-        @apply text-primary_text_black opacity-100;
-
-      }
-    }
-  }
-
-  .logo {
-    p {
-      @apply text-primary_text_black opacity-100;
-    }
-  }
-
-  .toggle {
-    @apply md:hidden flex flex-col gap-2 cursor-pointer z-50;
-
-    .checkbox {
-      @apply fixed block w-8 h-8 top-7 right-4 z-50 opacity-0 cursor-pointer;
-    }
-
-    .hamburger-lines {
-      @apply  h-6 w-7 fixed top-5 right-4 z-20 flex flex-col justify-between items-center;
-
-      span {
-        @apply bg-primary_text_black w-full flex rounded h-1;
-      }
-
-      .line1 {
-        transform-origin: 0% 0%;
-        transition: transform 0.4s ease-in-out;
-      }
-
-      .line2 {
-        transition: transform 0.2s ease-in-out;
-      }
-
-      .line3 {
-        transform-origin: 0% 100%;
-        transition: transform 0.4s ease-in-out;
-      }
-    }
-
-    input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
-      transform: rotate(45deg);
-    }
-
-    input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
-      transform: scaleY(0);
-    }
-
-    input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
-      transform: rotate(-45deg);
-    }
-
-    input[type="checkbox"]:checked ~ .logo {
-      display: none;
-    }
-
-    input[type="checkbox"]:checked ~ .hamburger-lines span {
-      @apply bg-primary_black border-primary_black;
-    }
-
-    input[type="checkbox"]:checked ~ .menu {
-      @apply right-0 top-0 z-10 w-full h-screen;
-    }
-
-    .menu {
-      @apply fixed right-[-1000px] top-0 z-10 flex flex-col gap-10 justify-center items-center bg-primary_light w-full px-8 sm:px-14;
-      font-family: 'shango-bold', sans-serif;
-      transition-duration: .25s;
-
-      .menu-ul {
-        @apply flex flex-col items-center gap-8 text-3xl sm:text-4xl leading-6 uppercase ;
-        li {
-          a{
-            transition-duration: .25s;
-            @apply hover:text-primary_yellow text-primary_text_black;
-          }
-        }
-      }
-
-      .variable {
-        @apply flex sm:flex-row flex-col gap-4 text-primary_text_black  h-36;
-        font-family: 'Comfortaa', sans-serif;
-
-        .setting {
-          @apply flex flex-col sm:gap-0 gap-7 justify-between h-full;
-          .lang {
-            @apply flex gap-4;
-
-            button {
-              @apply px-6 py-2 border border-primary_black text-primary_black relative;
-              transition: 0.5s;
-
-              span {
-                @apply bg-primary_black absolute -z-10 top-0 bottom-0 left-1/2 right-1/2;
-                transition: 0.5s;
-              }
-
-              &:hover {
-                @apply text-primary_light;
-                span {
-                  @apply right-0 left-0;
-                }
-              }
-            }
-          }
-
-          .social {
-            ul {
-              @apply flex items-center gap-9;
-              li{
-                a{
-                  @apply text-primary_blackmd;
-                }
-              }
-            }
-          }
-        }
-
-        .address {
-          @apply flex flex-col gap-2 mt-3 sm:mt-0;
-          p {
-            @apply flex items-center gap-2;
-            div {
-              @apply bg-primary_black w-7 h-7 rounded-full flex justify-center items-center;
-              svg {
-                @apply w-4 text-primary_light;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
 }
 
 .logo {
@@ -223,12 +78,12 @@
   }
 
   input[type="checkbox"]:checked ~ .menu {
-    @apply right-0 top-0 z-10 w-full h-screen;
+    @apply right-0 top-0 z-0 w-full h-screen;
   }
 
   .menu {
     @apply fixed right-[-1000px] top-0 z-10 flex flex-col gap-10 justify-center items-center bg-primary_light w-full px-8 sm:px-14;
-    font-family: 'shango-bold', sans-serif;
+    font-family: 'shango-bold';
     transition-duration: .25s;
 
     .menu-ul {
@@ -243,7 +98,7 @@
 
     .variable {
       @apply flex sm:flex-row flex-col gap-4 text-primary_text_black  h-36;
-      font-family: 'Comfortaa', sans-serif;
+      font-family: 'Comfortaa';
 
       .setting {
         @apply flex flex-col sm:gap-0 gap-7 justify-between h-full;
@@ -294,4 +149,141 @@
       }
     }
   }
+}
+
+.nav-scroll {
+  @apply w-full h-16 2xl:h-20 lg:h-16 2xl:px-52 xl:px-14 lg:px-7 px-6
+  flex items-center md:justify-between justify-center fixed bg-primary_light z-50 text-primary_text_black;
+  font-family: 'Comfortaa';
+  transition: 0.5s;
+  .nav-ul {
+    li {
+      a {
+        @apply text-primary_text_black opacity-100;
+
+      }
+    }
+  }
+
+  .logo {
+    p {
+      @apply text-primary_text_black opacity-100;
+    }
+  }
+
+  .toggle {
+    @apply md:hidden flex flex-col gap-2 cursor-pointer z-50;
+
+    .checkbox {
+      @apply fixed block w-8 h-8 top-7 right-4 z-50 opacity-0 cursor-pointer;
+    }
+
+    .hamburger-lines {
+      @apply  h-6 w-7 fixed top-5 right-4 z-20 flex flex-col justify-between items-center;
+
+      span {
+        @apply bg-primary_text_black w-full flex rounded h-1;
+      }
+
+      .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+      }
+
+      .line2 {
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+      }
+    }
+
+    input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+      transform: rotate(45deg);
+    }
+
+    input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+      transform: scaleY(0);
+    }
+
+    input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+      transform: rotate(-45deg);
+    }
+
+    input[type="checkbox"]:checked ~ .logo {
+      display: none;
+    }
+
+    .menu {
+      @apply fixed right-[-1000px] top-0 z-10 flex flex-col gap-10 justify-center items-center bg-primary_light w-full px-8 sm:px-14;
+      font-family: 'shango-bold';
+      transition-duration: .25s;
+
+      .menu-ul {
+        @apply flex flex-col items-center gap-8 text-3xl sm:text-4xl leading-6 uppercase ;
+        li {
+          a{
+            transition-duration: .25s;
+            @apply hover:text-primary_yellow text-primary_text_black;
+          }
+        }
+      }
+
+      .variable {
+        @apply flex sm:flex-row flex-col gap-4 text-primary_text_black  h-36;
+        font-family: 'Comfortaa';
+
+        .setting {
+          @apply flex flex-col sm:gap-0 gap-7 justify-between h-full;
+          .lang {
+            @apply flex gap-4;
+
+            button {
+              @apply px-6 py-2 border border-primary_black text-primary_black relative;
+              transition: 0.5s;
+
+              span {
+                @apply bg-primary_black absolute -z-10 top-0 bottom-0 left-1/2 right-1/2;
+                transition: 0.5s;
+              }
+
+              &:hover {
+                @apply text-primary_light;
+                span {
+                  @apply right-0 left-0;
+                }
+              }
+            }
+          }
+
+          .social {
+            ul {
+              @apply flex items-center gap-9;
+              li{
+                a{
+                  @apply text-primary_blackmd;
+                }
+              }
+            }
+          }
+        }
+
+        .address {
+          @apply flex flex-col gap-2 mt-3 sm:mt-0;
+          p {
+            @apply flex items-center gap-2;
+            div {
+              @apply bg-primary_black w-7 h-7 rounded-full flex justify-center items-center;
+              svg {
+                @apply w-4 text-primary_light;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
 }

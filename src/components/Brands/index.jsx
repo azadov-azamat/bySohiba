@@ -10,7 +10,7 @@ export default function Brands() {
 
     return (
         <div className={classes.wrapper} id={"brands"}>
-            <div className={classes.title}>
+            <div className={classes.title} data-aos="fade-up">
                 <p>
                     <span><span className={classes.p}>by</span>sohiba </span>&nbsp; предлагает вам <br className={"block sm:hidden"}/> следующие Бренды</p>
             </div>

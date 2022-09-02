@@ -1,12 +1,12 @@
-import i18n from "i18next";
-import HttpApi from "i18next-xhr-backend";
-import { initReactI18next } from "react-i18next";
+import i18n from "i18next"
+import HttpApi from "i18next-xhr-backend"
+import { initReactI18next } from "react-i18next"
 
 // eslint-disable-next-line import/prefer-default-export
 export const init = ({ languages, currentLanguage, initialLanguage, backend, debug, onChange }) => {
-  i18n.on("languageChanged", language => onChange(language));
+  i18n.on("languageChanged", language => onChange(language))
 
-  const checkedCurrentLanguage = languages.find(l => l === currentLanguage) || initialLanguage;
+  const checkedCurrentLanguage = languages.find(l => l === currentLanguage) || initialLanguage
 
   i18n
     .use(initReactI18next)
@@ -32,5 +32,5 @@ export const init = ({ languages, currentLanguage, initialLanguage, backend, deb
         useSuspense: true,
         wait: true
       }
-    });
-};
+    })
+}

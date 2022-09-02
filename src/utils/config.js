@@ -4,7 +4,7 @@ const config = {
     language: {
         key: "language",
         initial: "ru",
-        list: ["uz", "ru", "en"]
+        list: ["uz", "ru"]
     },
     api: {
         base_url: BASE_URL

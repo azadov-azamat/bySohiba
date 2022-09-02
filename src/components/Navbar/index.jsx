@@ -13,11 +13,14 @@ export default function Navbar() {
 
     const dispatch = useDispatch()
     const location = useLocation()
-    const path = location.pathname
+    const path = location?.pathname
 
+    const [lang, setLang] = useState(false)
     const [position, setPosition] = useState(0)
 
-    const {social} = useSelector(state => state.variables)
+    const {social, languages} = useSelector(state => state.variables)
+
+    const toggle =()=> setLang(!lang)
 
     useEffect(() => {
         window.addEventListener('scroll', listenToScroll)
@@ -29,22 +32,25 @@ export default function Navbar() {
     }
 
     const links = [
-        path !== defaultRoute && {id: 0, name: "Главная страница", href: defaultRoute},
+        {id: 0, name: "Главная страница", href: defaultRoute},
         {id: 1, name: 'Свадебные платья', href: '/weddings'},
         {id: 2, name: 'Abaya Boutique', href: '/abayas'},
         {id: 3, name: 'Beauty salon', href: '/beauty'}
     ]
 
     const links2 = [
+        {id: 0, name: "Главная страница", href: defaultRoute},
         {id: 1, name: 'Свадебные платья', href: '/weddings'},
         {id: 2, name: 'Abaya Boutique', href: '/abayas'}
     ]
 
     const links3 = [
+        {id: 0, name: 'Abaya Boutique', href: '/abayas'},
         {id: 1, name: 'Beauty salon', href: '/beauty'},
         {id: 2, name: 'Аксессуары', href: '/accessories'}
     ]
     const linksMd = [
+        {id: 0, name: "Главная страница", href: defaultRoute},
         {id: 1, name: 'Свадебные платья', href: '/weddings'},
         {id: 2, name: 'Abaya Boutique', href: '/abayas'},
         {id: 3, name: 'Beauty salon', href: '/beauty'},
@@ -65,23 +71,15 @@ export default function Navbar() {
             id: 2,
             name: <>
                 <BsGlobe fontSize={15}/>
-                Рус
+                {lang ? "Узб" : "Рус"}
             </>,
-            href: 'tel:+998 97 101 88-80',
-            onClick: changeLang
-        }
-    ]
-
-    const languages = [
-        {
-            value: "ru",
-            name: 'Рус',
-            name2: 'Русский'
-        },
-        {
-            value: "uz",
-            name: 'Узб',
-            name2: 'O`zbekcha'
+            href: '#',
+            onClick: ()=>{
+                changeLang()
+                setTimeout(() => {
+                    toggle()
+                }, 1000);
+            }
         }
     ]
 
@@ -91,6 +89,24 @@ export default function Navbar() {
             dispatch(handleRefresh(true))
         }, 2000);
     }
+
+    links.forEach(item => {
+        delete links[item.href === path && item.id]
+    })
+    linksMd.forEach(item => {
+        delete linksMd[item.href === path && item.id]
+    })
+    links2.forEach(item => {
+        delete links2[item.href === path && item.id]
+    })
+    links3.forEach(item => {
+        delete links3[item.href === path && item.id]
+    })
+
+    if (path === "/weddings") delete links3[0]
+    if (path === defaultRoute) delete links3[0]
+    if (path === "/beauty") delete links2[2]
+    if (path === "/accessories") delete links2[2]
 
     return (
         <nav className={position !== 0 || path === "/accessories" ? classes['nav-scroll'] : classes.navbar}>
@@ -116,7 +132,10 @@ export default function Navbar() {
 
             <div className={"hidden xl:flex"}>
                 <ul className={classes['nav-ul']}>
-                    <li><Link to={'/accessories'} className={"flex items-center gap-2"}>Аксессуары</Link></li>
+                    {path !== "/accessories" ?
+                        <li><Link to={'/accessories'} className={"flex items-center gap-2"}>Аксессуары</Link></li> :
+                        <li><Link to={'/beauty'} className={"flex items-center gap-2"}>Beauty salon</Link></li>
+                    }
                     {links4.map(link => <li key={link.id}><a className={"flex items-center gap-2"}
                                                              href={link.href} onClick={link.onClick}>{link.name}</a>
                     </li>)}
@@ -145,7 +164,7 @@ export default function Navbar() {
                         <div className={classes.setting}>
                             <div className={classes.lang}>
                                 {languages.map((item, index) =>
-                                    <button key={index}>
+                                    <button key={index} onClick={changeLang}>
                                         {item.name2}
                                         <span></span>
                                     </button>
@@ -154,7 +173,7 @@ export default function Navbar() {
                             <div className={classes.social}>
                                 <ul>
                                     {social.map((item, index) => <li key={index}><a href={item.link}
-                                                                                               target={"_blank"}>{item.name}</a>
+                                                                                    target={"_blank"}>{item.name}</a>
                                     </li>)}
                                 </ul>
                             </div>
