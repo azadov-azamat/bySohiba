@@ -41,7 +41,7 @@ export default function Footer(){
                        </div>
                        <div className={classes.social}>
                            <ul>
-                               {social.map((item, index) => <li key={index.toString()}><a href={item?.link}
+                               {social.map((item, index) => <li key={index}><a href={item?.link}
                                                                                           target={"_blank"}>{item?.name}</a></li>)}
                            </ul>
                        </div>
@@ -78,7 +78,7 @@ export default function Footer(){
                        </div>
                        <div className={classes.social}>
                            <ul>
-                               {social.map((item, index) => <li key={index.toString()}><a href={item?.link}
+                               {social.map((item, index) => <li key={index}><a href={item?.link}
                                                                                           target={"_blank"}>{item?.name}</a></li>)}
                            </ul>
                        </div>

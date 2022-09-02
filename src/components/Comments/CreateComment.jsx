@@ -28,7 +28,7 @@ export default function CreateComment() {
                         <span>согласие на обработку данных</span>
                     </label>
                     <div className={classes.stars}>
-                        {starsData.map((item, index) => <AiTwotoneStar key={index.toString()}/>)}
+                        {starsData.map((item, index) => <AiTwotoneStar key={index}/>)}
                     </div>
                     <button>Отправка</button>
                 </div>

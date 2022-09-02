@@ -1,11 +1,13 @@
+//REACT
 import React, {Suspense} from "react"
 import {BrowserRouter} from "react-router-dom"
 import {createRoot} from "react-dom/client"
 import {Provider} from "react-redux"
-import {ToastContainer} from "react-toastify"
 
+//STORE
 import {store} from "./redux/store"
 
+// CSS
 import './index.css'
 import "aos/dist/aos"
 import "aos/dist/aos.css"
@@ -13,10 +15,12 @@ import 'antd/dist/antd.css'
 import "react-toastify/dist/ReactToastify.css"
 import 'owl.carousel/dist/assets/owl.carousel.css'
 import 'owl.carousel/dist/assets/owl.theme.default.css'
-import "react-image-lightbox/style.css";
+import "react-image-lightbox/style.css"
 
+//COMPONENT
 import App from './App'
 import Spinner from "./components/Animation"
+import {ToastContainer} from "react-toastify"
 
 const app = (
     <Provider store={store}>

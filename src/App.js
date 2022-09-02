@@ -1,9 +1,8 @@
-import React, {useEffect, useState} from "react"
-import Layout from "./layout";
-import {Navigate, Route, Routes} from "react-router-dom";
-import routes from "./router";
-import {defaultRoute} from "./utils/constants";
-import Refresh from "./components/Animation";
+import React from "react"
+import Layout from "./layout"
+import {Navigate, Route, Routes} from "react-router-dom"
+import routes from "./router"
+import {defaultRoute} from "./utils/constants"
 
 function App() {
 

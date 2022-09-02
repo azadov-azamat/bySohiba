@@ -41,8 +41,6 @@ export default function SliderPhoto({title}) {
                     responsive={responsive}
                     smartSpeed={500}
                     scrollPerPage={true}
-                    pagination={true}
-                    paginationNumbers={true}
                 >
                     {catalog.map((item, index) => (
                         <div key={item.id} className={'relative overflow-hidden cursor-pointer mx-1'}>

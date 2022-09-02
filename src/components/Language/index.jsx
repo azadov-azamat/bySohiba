@@ -26,7 +26,7 @@ const Languages = () => {
         <div className='w-20 h-20 right-0 bg-primary_light text-primary_black mt-3 overflow-hidden'>
             {
                 languages?.filter(item => item.value !== i18n.language).map((item, index) => (
-                    <button key={index.toString()} onClick={() => i18n.changeLanguage(item.value)} className="px-4 py-2 flex justify-center hover:text-primary_yellow
+                    <button key={index} onClick={() => i18n.changeLanguage(item.value)} className="px-4 py-2 flex justify-center hover:text-primary_yellow
                      gap-2 duration-300 cursor-pointer">
                         <img src={langIcoColor} alt="lang_item" className={"w-6"}/>
                         <span className={"mx-2"}>{item.name}</span>

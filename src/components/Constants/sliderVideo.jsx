@@ -33,8 +33,6 @@ export default function SliderVideo({title, data}) {
                     responsive={responsive}
                     smartSpeed={500}
                     scrollPerPage={true}
-                    pagination={true}
-                    paginationNumbers={true}
                 >
                     {data.map((item, index) => (
                         <Col key={item.id} className={"2xl:w-56 xl:w-52 lg:w-48 md:w-44 sm:w-40 w-36 h-auto"}>

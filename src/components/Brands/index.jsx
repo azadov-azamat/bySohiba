@@ -2,7 +2,7 @@ import React from 'react'
 import classes from "./brands.module.scss"
 import CardBrand from "./Card"
 import {useSelector} from "react-redux"
-import {Row} from "antd";
+import {Row} from "antd"
 
 export default function Brands() {
 
@@ -11,7 +11,8 @@ export default function Brands() {
     return (
         <div className={classes.wrapper} id={"brands"}>
             <div className={classes.title}>
-                <p><span><p>by</p>sohiba </span>&nbsp; предлагает вам <br className={"block sm:hidden"}/> следующие Бренды</p>
+                <p>
+                    <span><span className={classes.p}>by</span>sohiba </span>&nbsp; предлагает вам <br className={"block sm:hidden"}/> следующие Бренды</p>
             </div>
             <Row className={"pb-16 gap-5 justify-center"}>
                 {

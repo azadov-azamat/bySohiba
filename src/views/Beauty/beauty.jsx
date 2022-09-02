@@ -8,7 +8,7 @@ import {useSelector} from "react-redux"
 
 export default function Beauty() {
 
-    const {catalog, videos} = useSelector(state => state.variables)
+    const {videos} = useSelector(state => state.variables)
 
     return (
         <>

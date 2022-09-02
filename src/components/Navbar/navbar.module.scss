@@ -282,7 +282,7 @@
 
       .address {
         @apply flex flex-col gap-2 mt-3 sm:mt-0;
-        p {
+        .p {
           @apply flex items-center gap-2;
           div {
             @apply bg-primary_black w-7 h-7 rounded-full flex justify-center items-center;

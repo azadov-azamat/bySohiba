@@ -29,6 +29,7 @@ export default function Navbar() {
     }
 
     const links = [
+        path !== defaultRoute && {id: 0, name: "Главная страница", href: defaultRoute},
         {id: 1, name: 'Свадебные платья', href: '/weddings'},
         {id: 2, name: 'Abaya Boutique', href: '/abayas'},
         {id: 3, name: 'Beauty salon', href: '/beauty'}
@@ -144,7 +145,7 @@ export default function Navbar() {
                         <div className={classes.setting}>
                             <div className={classes.lang}>
                                 {languages.map((item, index) =>
-                                    <button key={index.toString()}>
+                                    <button key={index}>
                                         {item.name2}
                                         <span></span>
                                     </button>
@@ -152,25 +153,25 @@ export default function Navbar() {
                             </div>
                             <div className={classes.social}>
                                 <ul>
-                                    {social.map((item, index) => <li key={index.toString()}><a href={item.link}
+                                    {social.map((item, index) => <li key={index}><a href={item.link}
                                                                                                target={"_blank"}>{item.name}</a>
                                     </li>)}
                                 </ul>
                             </div>
                         </div>
                         <div className={classes.address}>
-                            <p>
+                            <div className={classes.p}>
                                 <div>
                                     <BsClock fontSize={15}/>
                                 </div>
                                 Без выходных 10:00 - 19:00
-                            </p>
-                            <p>
+                            </div>
+                            <div className={classes.p}>
                                 <div>
                                     <IoLocationOutline fontSize={15}/>
                                 </div>
                                 Ташкент, улица Мирза Голиб 1
-                            </p>
+                            </div>
                         </div>
                     </div>
                 </div>

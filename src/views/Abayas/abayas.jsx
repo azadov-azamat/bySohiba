@@ -19,7 +19,6 @@ export default function Abayas() {
             <Constant.sliderPhoto title={"Обувь"}/>
             <Constant.sliderPhoto title={"аксессуары"}/>
             <Constant.sliderVideo title={"Видеоблог"} data={videos}/>
-            {/*<Constant.video title={"Видеоблог"} data={videos}/>*/}
         </>
     )
 }

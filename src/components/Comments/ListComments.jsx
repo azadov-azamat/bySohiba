@@ -20,7 +20,7 @@ export default function ListComments({name, text, stars}) {
               <div className={classes.owner}>
                   <div className={classes.name}>{name}</div>
                   <div className={classes.stars}>
-                      {starsData.map((item, index)=>  <AiTwotoneStar fontSize={20} key={index.toString()}/>)}
+                      {starsData.map((item, index)=>  <AiTwotoneStar key={index} fontSize={20}/>)}
                   </div>
               </div>
           </div>

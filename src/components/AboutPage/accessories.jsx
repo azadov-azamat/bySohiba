@@ -3,11 +3,6 @@ import classes from "./about.module.scss"
 import bg from "../../assets/png/bg/accessoriesBg.png"
 import img from "../../assets/png/bg/accessories.png"
 
-import pattern1 from "../../assets/png/bg/pattern1.png"
-import pattern3 from "../../assets/png/bg/pattern2.png"
-
-import shadow1 from "../../assets/png/shadows/img.png"
-
 export default function Accessories() {
     return (
         <section className={classes['about-page-acc']} id={"about"}>

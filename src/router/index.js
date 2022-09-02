@@ -1,9 +1,10 @@
-import {defaultRoute} from "../utils/constants.js"
 import Home from "../views/Home/index.jsx"
 import Weddings from "../views/Weddings"
 import Abayas from "../views/Abayas"
 import Beauty from "../views/Beauty"
 import Accessories from "../views/Accessories"
+
+import {defaultRoute} from "../utils/constants.js"
 
 const routes = [
     {
