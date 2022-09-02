@@ -1,10 +1,12 @@
 import React, {useState} from "react"
 import classes from "./comments.module.scss"
 import commentImg from "../../assets/ico/comment.png"
-import {AiFillStar, AiTwotoneStar} from "react-icons/ai"
-import {useFormik} from "formik";
-import {useDispatch} from "react-redux";
-import {pushComment} from "../../redux/reducers/Variables";
+import {AiFillStar} from "react-icons/ai"
+import {useFormik} from "formik"
+import {useDispatch} from "react-redux"
+import {pushComment} from "../../redux/reducers/Variables"
+import * as Button from "../Button"
+import * as Yup from "yup"
 
 export default function CreateComment() {
 
@@ -19,10 +21,16 @@ export default function CreateComment() {
     function uuidv4() {
         return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, c =>
             (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
-        );
+        )
     }
 
+    const ValidateSchema = Yup.object().shape({
+        name: Yup.string().required(),
+        text: Yup.string().required()
+    })
+
     const formik = useFormik({
+        ValidateSchema,
         initialValues: {},
         onSubmit: (val, {resetForm}) => {
             const data = {
@@ -35,6 +43,7 @@ export default function CreateComment() {
         }
     })
 
+    console.log(formik)
     return (
         <div className={classes.create}>
             <div className={classes.img}>
@@ -48,11 +57,12 @@ export default function CreateComment() {
                               onChange={(e) => {
                                   setTextLength((e.target.value).length)
                                   formik.setFieldValue("text", e.target.value)
-                              }} required/>
+                                  if ((e.target.value).length === 0) formik.resetForm({values: ''})
+                              }}/>
                     <span>{textLength}/300</span>
                 </div>
                 <div className={classes.name}>
-                    <input className={"h-9 px-5 py-4"} type="text" name="name" required placeholder={"Ваше имя"}
+                    <input className={"h-9 px-5 py-4"} type="text" name="name" placeholder={"Ваше имя"}
                            onChange={formik.handleChange}/>
                     <label htmlFor="check">
                         <input
@@ -68,7 +78,11 @@ export default function CreateComment() {
                                                                     style={stars >= index ? {color: '#6C9392'} : {color: "#D9D9D9"}}
                                                                     onClick={() => setStars(index)}/>)}
                     </div>
-                    <button type={"reset"} onClick={formik.handleSubmit}>Отправка</button>
+                    <Button.Ripple
+                        onClick={formik.handleSubmit}
+                        type={"reset"} color={!formik.isValid || !formik.dirty ? "disable" : "success"}
+                        disabled={!formik.isValid || !formik.dirty}
+                    >Отправка</Button.Ripple>
                 </div>
             </form>
         </div>

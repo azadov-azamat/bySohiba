@@ -6,6 +6,7 @@ import {FiPhone} from "react-icons/fi"
 import {BiChevronDown} from "react-icons/bi"
 import {CgMouse} from "react-icons/cg"
 import {IoLocationOutline} from "react-icons/io5"
+import * as Button from "../Button"
 
 export default function Landing() {
     return (
@@ -14,10 +15,7 @@ export default function Landing() {
             <div className={classes['head-top']}></div>
             <div className={classes['head-text']}>
                 <h1>бренд, который восхитил многих <br className={"hidden lg:block"}/> мусульманских невест по всему миру</h1>
-                <button>
-                    Получить консультацию
-                    <span></span>
-                </button>
+                <Button.Ripple onClick={e => console.log(e)} outline={true} color={"outline"}>Получить консультация</Button.Ripple>
                 <div className={classes.play}>
                     <div>Посмотреть видео</div>
                     <BsPlay fontSize={25}/>

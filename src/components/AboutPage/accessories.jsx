@@ -3,6 +3,8 @@ import classes from "./about.module.scss"
 import bg from "../../assets/png/bg/accessoriesBg.png"
 import img from "../../assets/png/bg/accessories.png"
 
+import * as Button from "../Button"
+
 export default function Accessories() {
     return (
         <section className={classes['about-page-acc']} id={"about"}>
@@ -36,9 +38,7 @@ export default function Accessories() {
                     гордиться, что носят действительно редкое и неповторимое ювелирное изделие.
                 </div>
                 <div className={classes.btn}>
-                    <button>
-                        Получить консультация
-                    </button>
+                    <Button.Ripple onClick={e => console.log(e)} color={"success"}>Получить консультация</Button.Ripple>
                 </div>
             </div>
             <div className={classes.image}>

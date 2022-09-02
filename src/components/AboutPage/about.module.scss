@@ -41,14 +41,6 @@
       }
     }
   }
-
-  .btn {
-    @apply flex justify-start;
-    button {
-      @apply 2xl:py-5 xl:py-4 lg:py-3 py-2 2xl:px-12 xl:px-10 lg:px-8 px-6 bg-primary_black text-primary_light rounded;
-      font-family: 'Comfortaa';
-    }
-  }
 }
 
 .image {

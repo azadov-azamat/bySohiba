@@ -3,6 +3,8 @@ import classes from "./about.module.scss"
 import bg from "../../assets/png/bg/beautyBg.png"
 import img from "../../assets/png/bg/beauty.png"
 
+import * as Button from "../Button"
+
 export default function Beauty() {
     return (
         <section className={classes['about-page']} id={"about"}>
@@ -25,9 +27,7 @@ export default function Beauty() {
                     По желанию клиентки может проводиться пробный макияж, который поможет определиться с окончательным образом.
                 </div>
                 <div className={classes.btn}>
-                    <button>
-                        Получить консультация
-                    </button>
+                    <Button.Ripple onClick={e => console.log(e)} color={"success"}>Получить консультация</Button.Ripple>
                 </div>
             </div>
         </section>

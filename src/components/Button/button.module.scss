@@ -1,0 +1,81 @@
+.ripple-button {
+  @apply 2xl:py-5 2xl:py-12 xl:px-11 py-4 px-6 relative m-2 cursor-pointer overflow-hidden text-primary_light;
+  font-family: 'Comfortaa';
+  transition: 300ms;
+  border-radius: 3px;
+
+  .content {
+    @apply flex justify-center items-center relative text-center;
+    z-index: 2;
+
+    svg {
+      @apply text-primary_light font-bold text-2xl;
+    }
+  }
+
+  .ripple {
+    @apply bg-primary_black rounded-full w-5 h-5 absolute block;
+    content: "";
+    opacity: 1;
+    animation: 0.9s ease 1 forwards ripple-effect;
+  }
+
+  @keyframes ripple-effect {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(10);
+      opacity: 0.375;
+    }
+    100% {
+      transform: scale(35);
+      opacity: 0;
+    }
+  }
+}
+
+.success {
+  @apply hover:bg-primary_checkbox bg-primary_black;
+}
+
+.disable {
+  @apply bg-primary_checkbox cursor-auto;
+}
+
+.outline {
+  @apply border border-primary_light 2xl:text-lg xl:text-base opacity-80;
+  background-color: transparent;
+
+  .span {
+    @apply absolute top-0 bottom-0 left-1/2 right-1/2 -z-10;
+    background-color: transparent;
+    transition: 0.5s;
+  }
+
+  &:hover {
+    .span {
+      @apply opacity-20 right-0 left-0 bg-primary_black;
+      z-index: 1;
+    }
+  }
+}
+
+.outline-border {
+  @apply border border-primary_text_black text-primary_text_black 2xl:text-lg xl:text-base opacity-80;
+  background-color: transparent;
+
+  .span {
+    @apply absolute top-0 bottom-0 left-1/2 right-1/2 -z-10;
+    background-color: transparent;
+    transition: 0.5s;
+  }
+
+  &:hover {
+    .span {
+      @apply opacity-20 right-0 left-0 bg-primary_black;
+      z-index: 1;
+    }
+  }
+}

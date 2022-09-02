@@ -3,6 +3,7 @@ import classes from "./about.module.scss"
 import bg from "../../assets/png/bg/weddingBg.png"
 import img from "../../assets/png/bg/wedding.png"
 import logo from "../../assets/png/logo.png"
+import * as Button from "../Button";
 
 export default function Weddings() {
     return (
@@ -23,9 +24,7 @@ export default function Weddings() {
                     Скромность форм и красивые дизайнерские решения помогут вам стать самой красивой невестой вечера.
                 </div>
                 <div className={classes.btn}>
-                    <button>
-                        Получить консультацию
-                    </button>
+                    <Button.Ripple onClick={e => console.log(e)} color={"success"}>Получить консультация</Button.Ripple>
                 </div>
             </div>
             <div className={classes.image}>

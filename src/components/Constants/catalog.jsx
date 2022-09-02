@@ -2,8 +2,10 @@ import React, {useEffect, useState} from "react"
 import classes from "./scss/catalog.module.scss"
 import {Col, Row} from "antd"
 import ImagePreview from "../ImagePreview"
-import Title from "./title";
-import Image from "../Image";
+import Title from "./title"
+import Image from "../Image"
+
+import * as Button from "../Button"
 
 export default function Catalog({title, data}) {
 
@@ -54,8 +56,8 @@ export default function Catalog({title, data}) {
                 }
             </Row>
             {isOpen && <ImagePreview setOpen={setIsOpen} data={data} dataId={currentImg}/>}
-            <div className={classes.btn}>
-                <button>Показать еще <span></span></button>
+            <div className={"pt-12 flex justify-center"}>
+                <Button.Ripple onClick={e => console.log(e)} outline={true} color={"outline-border"}>Показать еще</Button.Ripple>
             </div>
         </section>
     )

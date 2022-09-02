@@ -4,8 +4,9 @@ import {Col, Row} from "antd"
 import instagramIco from "../../assets/png/instagram.png"
 import logo from "../../assets/png/logo@.png"
 
-import {useSelector} from "react-redux";
+import {useSelector} from "react-redux"
 import {BsArrowRightShort} from "react-icons/bs"
+import * as Button from "../Button"
 
 export default function Instagram(){
 
@@ -35,10 +36,10 @@ export default function Instagram(){
                 }
             </Row>
             <div className={classes.bottom}>
-                <a href={"https://www.instagram.com/bysohiba_dev/"} target={"_blank"}>
+                <Button.Ripple onClick={e => window.location.replace("https://www.instagram.com/bysohiba_dev")} color={"success"}>
                     Перейти в Instagram
                     <BsArrowRightShort/>
-                </a>
+                </Button.Ripple>
                 <img src={logo} alt="logo" className={classes.logo} width={240}/>
             </div>
         </div>

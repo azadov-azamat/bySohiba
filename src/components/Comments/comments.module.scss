@@ -78,7 +78,8 @@
         textarea {
           @apply w-full h-full px-5 py-4;
         }
-        span{
+
+        span {
           @apply absolute bottom-4 right-5 text-[#7F7F7F];
         }
       }
@@ -98,24 +99,21 @@
           @apply flex items-center font-normal text-sm text-primary_black gap-2 cursor-pointer;
           font-family: 'Comfortaa';
 
-          span{
+          span {
             @apply mx-2;
           }
-          input{
+
+          input {
             @apply border-primary_checkbox;
 
           }
         }
 
-        .stars{
+        .stars {
           @apply flex w-full justify-between;
-          svg{
+          svg {
             @apply text-primary_text_black text-3xl cursor-pointer;
           }
-        }
-        button{
-          @apply w-full py-3 flex justify-center items-center bg-primary_black rounded text-primary_light;
-          font-family: 'Comfortaa';
         }
       }
     }
