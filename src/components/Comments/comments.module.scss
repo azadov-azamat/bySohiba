@@ -20,7 +20,7 @@
     .carousel {
       @apply sm:w-80 w-full h-72 flex items-center;
       .list {
-        @apply w-full h-56 flex flex-col gap-4 py-14 px-8 shadow shadow-comments rounded-2xl bg-primary_light  relative;
+        @apply w-full h-56 flex flex-col justify-between py-5 px-8 shadow shadow-comments rounded-2xl bg-primary_light  relative;
 
         .head {
           @apply absolute -top-7 sm:left-32 left-52 z-50;
@@ -33,12 +33,12 @@
         }
 
         .p-text {
-          @apply w-full font-light text-base text-primary_black;
+          @apply w-full h-32 overflow-hidden text-ellipsis font-light text-base text-primary_black pt-2;
           font-family: 'Comfortaa';
         }
 
         .owner {
-          @apply w-full flex justify-between items-center;
+          @apply w-full flex justify-between float-right items-center;
           .stars {
             @apply flex items-center;
             svg {

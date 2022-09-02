@@ -36,13 +36,14 @@ export default function Comments() {
             items: 4
         }
     }
-
+    console.log(comments)
     return (
         <div className={classes.wrapper}>
             <Title text={"Дадим слова нашим клиентам"}/>
-            <div className={classes['owl-theme']}>
+            <div className={comments?.length === 0 ? "hidden" : classes['owl-theme']}>
                 <OwlCarousel
                     loop
+                    autoplay={true}
                     nav={true}
                     center={true}
                     responsive={responsive}

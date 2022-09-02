@@ -8,6 +8,7 @@
     "aos": "^2.3.4",
     "axios": "^0.27.2",
     "cra-template": "1.2.0",
+    "formik": "^2.2.9",
     "i18next": "^21.9.1",
     "i18next-xhr-backend": "^3.2.2",
     "lodash": "^4.17.21",
