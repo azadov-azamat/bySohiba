@@ -12,13 +12,15 @@ export default function SliderVideo({title, data}) {
 
     const responsive = {
         0: {
-            items: 3
+            slidesPerView: 3
         },
         600: {
-            items: 4
+            minWidth: 600,
+            slidesPerView: 5
         },
         950: {
-            items: 5
+            minWidth: 950,
+            slidesPerView: 5
         }
     }
 

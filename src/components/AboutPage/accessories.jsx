@@ -33,6 +33,14 @@ export default function Accessories() {
                         <span className={classes.warn}> bysohiba</span>
                     </div>
                 </div>
+                <div className={classes.image}>
+                    <div className={classes.img}>
+                        <img src={img} alt="page-img"/>
+                    </div>
+                    <div className={classes.bg}>
+                        <img src={bg} alt="bg"/>
+                    </div>
+                </div>
                 <div className={classes.about}>
                     Все модели украшений производятся в единственном экземпляре, поэтому их обладательницы могут
                     гордиться, что носят действительно редкое и неповторимое ювелирное изделие.

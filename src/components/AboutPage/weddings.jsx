@@ -11,12 +11,20 @@ export default function Weddings() {
             <div className={classes.text}>
                 <div className={classes.title} data-aos="fade-up">
                     <div className={classes.h1}>
-                       <div className="flex gap-2">
+                       <div className="flex justify-center gap-2 md:justify-start flex-col sm:flex-row items-center">
                            <span>Свадебные платья от бренда</span>
                            <img src={logo} alt=""/>
                        </div>
                     </div>
                     <div className={classes.span}></div>
+                </div>
+                <div className={classes.image}>
+                    <div className={classes.img}>
+                        <img src={img} alt="page-img"/>
+                    </div>
+                    <div className={classes.bg}>
+                        <img src={bg} alt="bg"/>
+                    </div>
                 </div>
                 <div className={classes.about}>
                     Уникальные свадебные платья, основанные на последних тенденциях исламского мира, которые максимально

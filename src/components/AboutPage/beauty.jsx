@@ -22,6 +22,14 @@ export default function Beauty() {
                         почему <span className={classes.warn}> Bysohiba beauty salon</span>
                     </div>
                 </div>
+                <div className={classes.image}>
+                    <div className={classes.img}>
+                        <img src={img} alt="page-img"/>
+                    </div>
+                    <div className={classes.bg}>
+                        <img src={bg} alt="bg"/>
+                    </div>
+                </div>
                 <div className={classes.about}>
                     Особый вид макияжа - это свадебный макияж. Мы знаем, как важно для вас это событие и подходим к созданию свадебного образа со всей ответственностью и старанием.
                     По желанию клиентки может проводиться пробный макияж, который поможет определиться с окончательным образом.

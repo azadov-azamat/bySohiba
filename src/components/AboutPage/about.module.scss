@@ -1,13 +1,13 @@
 .about-page {
-  @apply w-full md:h-[80vh] h-auto flex md:flex-row flex-col items-center 2xl:px-52 xl:px-14 lg:px-7 px-6 md:pt-0 pt-10 pb-16;
+  @apply w-full md:h-screen h-auto flex md:flex-row flex-col justify-center items-center 2xl:px-52 xl:px-14 lg:px-7 px-6  pt-10 pb-16;
 }
 
 .text {
-  @apply md:w-1/2 w-full flex flex-col gap-9;
+  @apply md:w-1/2 w-full flex flex-col gap-9 md:items-start items-center;
   .title {
-    @apply w-full;
+    @apply w-full md:text-start text-center;
     .h1 {
-      @apply 2xl:text-3xl xl:text-2xl lg:text-xl md:text-base sm:text-2xl text-xl p-2 gap-2 tracking-wider text-primary_text_black;
+      @apply 2xl:text-3xl xl:text-2xl lg:text-xl md:text-base sm:text-2xl text-xl p-2 gap-2 tracking-wider text-primary_text_black uppercase;
       font-family: 'Shango-Bold';
 
       img {
@@ -15,12 +15,31 @@
       }
 
       .warn {
-        @apply text-primary_yellow uppercase;
+        @apply text-primary_yellow;
       }
     }
 
     .span {
-      @apply w-1/4 border-2 mx-2 rounded border-primary_text_black;
+      @apply w-1/4 hidden md:block border-2 mx-2 rounded border-primary_text_black;
+    }
+  }
+
+  .image {
+    @apply w-2/3 sm:w-3/5 relative 2xl:pt-52 xl:pt-14 lg:pt-7 md:pt-6 pt-0 md:hidden flex justify-center items-center pb-4;
+    .bg {
+      @apply sm:w-[340px] sm:h-[340px] w-64 h-64
+       absolute flex justify-center -z-10;
+      img {
+        @apply object-cover absolute object-center
+      }
+    }
+    .img {
+      @apply sm:w-72 sm:h-72 w-56 h-56  overflow-hidden z-10;
+      border-radius: 52% 100% 100% 30% / 84% 100% 54% 68%;
+
+      img {
+        @apply object-cover object-center w-full h-full;
+      }
     }
   }
 
@@ -36,7 +55,7 @@
           background-image: url("../../assets/ico/li.png");
           background-repeat: no-repeat;
           background-size: 12px 12px;
-          content:"";
+          content: "";
         }
       }
     }
@@ -44,11 +63,12 @@
 }
 
 .image {
-  @apply md:w-1/2 w-full relative 2xl:pt-52 xl:pt-14 lg:pt-7 md:pt-6 pt-0 flex md:justify-center justify-end pb-4;
+  @apply w-1/2 relative 2xl:pt-52 xl:pt-14 lg:pt-7 md:pt-6 pt-0 hidden md:flex md:justify-center;
   .bg {
     @apply 2xl:w-[500px] 2xl:h-[500px] xl:w-[470px] xl:h-[470px] lg:w-[420px] lg:h-[420px] md:w-[370px] md:h-[370px] sm:w-72 sm:h-72 w-64 h-64
-    2xl:right-52 xl:right-20 lg:right-20 md:right-14 md:right-6 right-0 2xl:top-24 xl:top-16 lg:top-10 md:top-6 top-0
-    absolute -z-50 bg-cover bg-center;
+    2xl:right-52 xl:right-20 lg2:right-16 lg:right-16 md2:right-10 right-5
+    2xl:top-24 xl:top-16 lg:top-10 md:top-6 top-0 rounded-full
+    absolute -z-50;
     img {
       @apply object-cover object-center
     }
@@ -65,5 +85,5 @@
 }
 
 .about-page-acc {
-  @apply w-full h-screen flex md:flex-row flex-col items-center 2xl:px-52 xl:px-14 lg:px-7 px-6 md:pt-0 pt-20;
+  @apply w-full md:h-screen h-auto flex md:flex-row flex-col items-center 2xl:px-52 xl:px-14 lg:px-7 px-6 md:pt-0 pt-20;
 }
