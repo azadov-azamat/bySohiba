@@ -1,18 +1,25 @@
-import React from "react"
+import React, {useEffect} from "react"
 import * as About from "../../components/AboutPage"
 import * as Constant from "../../components/Constants"
 
 import {useSelector} from "react-redux"
+import AOS from "aos"
 
 export default function Accessories() {
 
-    const {catalog, videos} = useSelector(state => state.variables)
+    const {videos} = useSelector(state => state.variables)
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000
+        });
+    }, [])
 
     return (
         <>
-            <About.accessories/>
-            <Constant.sliderPhoto title={"примеры наших работ"}/>
-            <Constant.sliderVideo title={"видеоблог"} data={videos}/>
+            <About.Accessories/>
+            <Constant.SliderPhoto title={"примеры наших работ"}/>
+            <Constant.SliderVideo title={"видеоблог"} data={videos}/>
         </>
     )
 }

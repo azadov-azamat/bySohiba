@@ -1,8 +1,6 @@
 import React, {useEffect} from 'react'
 import AOS from "aos"
 import Brands from "../../components/Brands"
-import Instagram from "../../components/Instagram"
-import Comments from "../../components/Comments"
 import * as Header from "../../components/Header"
 
 export default function Home() {
@@ -15,10 +13,8 @@ export default function Home() {
 
     return (
         <>
-            <Header.landing/>
+            <Header.Landing/>
             <Brands/>
-            {/*<Instagram/>*/}
-            {/*<Comments/>*/}
         </>
     )
 }

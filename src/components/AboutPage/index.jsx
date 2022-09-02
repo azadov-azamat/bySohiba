@@ -1,4 +1,4 @@
-export {default as wedding} from "./weddings"
-export {default as abayas} from "./abayas"
-export {default as beauty} from "./beauty"
-export {default as accessories} from "./accessories"
+export {default as Wedding} from "./weddings"
+export {default as Abayas} from "./abayas"
+export {default as Beauty} from "./beauty"
+export {default as Accessories} from "./accessories"
