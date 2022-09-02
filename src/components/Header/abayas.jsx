@@ -10,7 +10,7 @@ import {IoLocationOutline} from "react-icons/io5"
 export default function Abayas() {
     return (
         <header className={classes.header}>
-            <img src={head} alt="header-img" className={"w-full h-full absolute -z-10 object-center"}/>
+            <img src={head} alt="header-img" className={"w-full h-full absolute -z-10 object-cover object-center"}/>
             <div className={classes['head-top']}></div>
             <div className={classes['head-text']}>
                 <div className={classes['border-head']}>

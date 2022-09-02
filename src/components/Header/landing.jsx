@@ -11,7 +11,7 @@ import * as Button from "../Button"
 export default function Landing() {
     return (
         <header className={classes.header}>
-            <img src={head} alt="header-img" className={"w-full h-full absolute -z-10 object-center"}/>
+            <img src={head} alt="header-img" className={"w-full h-full absolute -z-10 object-cover object-center"}/>
             <div className={classes['head-top']}></div>
             <div className={classes['head-text']}>
                 <h1>бренд, который восхитил многих <br className={"hidden lg:block"}/> мусульманских невест по всему миру</h1>

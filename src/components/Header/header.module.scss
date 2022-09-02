@@ -3,28 +3,13 @@
   font-family: 'Comfortaa';
 
   .head-text {
-    @apply flex flex-col items-center justify-center w-2/3 text-primary_light gap-14;
+    @apply flex flex-col items-center justify-center sm:w-2/3 w-full text-primary_light gap-14;
     //z-index: 0;
     h1 {
       @apply 2xl:text-5xl md:text-4xl text-2xl tracking-wider text-center text-primary_light;
       font-family: 'shango-bold';
       line-height: 138%;
     }
-
-    //button {
-    //  @apply px-9 py-5 border border-primary_light relative 2xl:text-lg xl:text-base opacity-80;
-    //  //z-index: -;
-    //  span {
-    //    @apply bg-primary_black absolute top-0 bottom-0 left-1/2 right-1/2 opacity-0 group-hover:opacity-10 group-hover:right-0 group-hover:left-0;
-    //    transition: 0.5s;
-    //  }
-    //
-    //  &:hover {
-    //    span {
-    //      @apply opacity-20 right-0 left-0;
-    //    }
-    //  }
-    //}
 
     .play {
       @apply flex items-center justify-between gap-2 cursor-pointer;
@@ -37,10 +22,10 @@
     }
 
     .border-head {
-      @apply 2xl:py-14 2xl:px-20 xl:py-12 xl:px-16 lg:py-10 lg:px-14 md:py-8 md:px-12 py-6 px-4 border border-primary_light
+      @apply 2xl:py-14 2xl:px-20 xl:py-12 xl:px-16 lg:py-10 lg:px-14 md:py-8 md:px-12 md:w-auto w-full py-6 px-0 border border-primary_light
       text-center bg-primary_page backdrop-blur-lg;
       .span {
-        @apply 2xl:text-4xl xl:text-2xl lg:text-2xl md:text-xl text-base  uppercase tracking-wider text-primary_light;
+        @apply 2xl:text-4xl xl:text-2xl lg:text-2xl md:text-xl text-2xl  uppercase tracking-wider text-primary_light;
         font-family: 'Shango-Bold';
 
         span {

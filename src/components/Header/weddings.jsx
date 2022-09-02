@@ -1,8 +1,7 @@
 import React from 'react'
 import classes from "./header.module.scss"
 import head from "../../assets/png/head/weddings.png"
-import {BsClock, BsPlay} from "react-icons/bs"
-import {FiPhone} from "react-icons/fi"
+import {BsClock} from "react-icons/bs"
 import {BiChevronDown} from "react-icons/bi"
 import {CgMouse} from "react-icons/cg"
 import {IoLocationOutline} from "react-icons/io5"
@@ -10,7 +9,7 @@ import {IoLocationOutline} from "react-icons/io5"
 export default function Weddings() {
     return (
         <header className={classes.header}>
-            <img src={head} alt="header-img" className={"w-full h-full absolute -z-10 object-center"}/>
+            <img src={head} alt="header-img" className={"w-full h-full absolute -z-10 object-cover object-center"}/>
             <div className={classes['head-top']}></div>
             <div className={classes['head-text']}>
                 <div className={classes['border-head']}>
