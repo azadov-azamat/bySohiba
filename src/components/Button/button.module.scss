@@ -5,7 +5,7 @@
   border-radius: 3px;
 
   .content {
-    @apply flex justify-center items-center relative text-center;
+    @apply flex justify-center items-center relative text-center gap-3;
     z-index: 2;
 
     svg {
