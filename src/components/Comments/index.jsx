@@ -46,6 +46,7 @@ export default function Comments() {
                     autoplay={true}
                     nav={true}
                     center={true}
+                    dots={false}
                     responsive={responsive}
                     smartSpeed={500}
                 >

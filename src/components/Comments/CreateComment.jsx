@@ -9,9 +9,12 @@ import {pushComment} from "../../redux/reducers/Variables";
 export default function CreateComment() {
 
     const dispatch = useDispatch()
-    const [textLength, setTextLength] = useState(0)
 
+    const [textLength, setTextLength] = useState(0)
     const [stars, setStars] = useState(0)
+    const [checked, setChecked] = useState(false)
+
+    const toggle = () => setChecked(!checked)
 
     function uuidv4() {
         return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, c =>
@@ -56,7 +59,7 @@ export default function CreateComment() {
                             id={"check"}
                             type={"checkbox"}
                             onChange={toggle}
-                            className="checked:bg-primary_green_darken rounded-xl bg-transparent w-8 border-none focus:shadow-none"
+                            className="checked:bg-primary_black rounded-xl bg-transparent w-8 border-none focus:shadow-none"
                         />
                         <span>согласие на обработку данных</span>
                     </label>

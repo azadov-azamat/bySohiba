@@ -14,6 +14,7 @@ import "aos/dist/aos"
 import "aos/dist/aos.css"
 import 'antd/dist/antd.min.css'
 import "react-toastify/dist/ReactToastify.css"
+import 'swiper/css'
 import 'owl.carousel/dist/assets/owl.carousel.css'
 import 'owl.carousel/dist/assets/owl.theme.default.css'
 import "react-image-lightbox/style.css"

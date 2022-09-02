@@ -107,6 +107,7 @@ export default function Navbar() {
     if (path === defaultRoute) delete links3[0]
     if (path === "/beauty") delete links2[2]
     if (path === "/accessories") delete links2[2]
+    if (path === "/accessories") delete links[3]
 
     return (
         <nav className={position !== 0 || path === "/accessories" ? classes['nav-scroll'] : classes.navbar}>

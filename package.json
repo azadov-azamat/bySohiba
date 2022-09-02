@@ -25,7 +25,8 @@
     "react-toastify": "^9.0.8",
     "redux-toolkit": "^1.1.2",
     "sass": "^1.54.5",
-    "store2": "^2.14.2"
+    "store2": "^2.14.2",
+    "swiper": "^8.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
