@@ -1,6 +1,5 @@
 .title {
-  @apply w-full flex justify-center items-center text-xl xl:text-3xl lg:text-2xl uppercase pb-2;
-  font-family: 'shango-bold';
+  @apply w-full flex justify-center items-center font-shangoB text-xl xl:text-3xl lg:text-2xl uppercase pb-2;
 
   p {
     @apply flex text-primary_text_black;

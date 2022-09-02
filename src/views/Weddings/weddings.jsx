@@ -1,4 +1,4 @@
-import React, {useEffect} from "react"
+import React, {useEffect, useState} from "react"
 import * as Header from "../../components/Header"
 import * as About from "../../components/AboutPage"
 import * as Constant from "../../components/Constants"
@@ -8,6 +8,17 @@ import AOS from "aos"
 export default function Weddings() {
 
     const {catalog, videos} = useSelector(state => state.variables)
+
+    const [width, setWidth] = useState(0)
+
+    useEffect(() => {
+        window.addEventListener('scroll', listenToScroll)
+    }, [])
+
+    const listenToScroll = () => {
+        const winScroll = window.innerWidth
+        setWidth(winScroll)
+    }
 
     useEffect(() => {
         AOS.init({
@@ -20,7 +31,9 @@ export default function Weddings() {
             <Header.Wedding/>
             <About.Wedding/>
             <Constant.Catalog title={"каталог"} data={catalog}/>
-            <Constant.Video title={"видеогалерея"} data={videos}/>
+            {
+                width < 530 ? <Constant.SliderVideo title={"видеогалерея"} data={videos}/> : <Constant.Video title={"видеогалерея"} data={videos}/>
+            }
         </>
     )
 }

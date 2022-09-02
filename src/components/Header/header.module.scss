@@ -1,19 +1,15 @@
 .header {
-  @apply w-full h-screen flex flex-col items-center justify-between bg-primary_header;
-  font-family: 'Comfortaa';
+  @apply w-full h-screen flex flex-col items-center justify-between font-comforts bg-primary_header;
 
   .head-text {
     @apply flex flex-col items-center justify-center sm:w-2/3 w-full text-primary_light gap-14;
-    //z-index: 0;
+
     h1 {
-      @apply 2xl:text-5xl md:text-4xl text-2xl tracking-wider text-center text-primary_light;
-      font-family: 'shango-bold';
-      line-height: 138%;
+      @apply font-shangoB 2xl:text-5xl md:text-4xl text-2xl tracking-wider text-center text-primary_light leading-[138%];
     }
 
     .play {
-      @apply flex items-center justify-between gap-2 cursor-pointer;
-      font-family: 'Comfortaa';
+      @apply flex items-center justify-between gap-2 cursor-pointer font-comforts;
 
       div {
         @apply 2xl:text-lg xl:text-base opacity-80 ;
@@ -25,8 +21,7 @@
       @apply 2xl:py-14 2xl:px-20 xl:py-12 xl:px-16 lg:py-10 lg:px-14 md:py-8 md:px-12 md:w-auto w-full py-6 px-0 border border-primary_light
       text-center bg-primary_page backdrop-blur-lg;
       .span {
-        @apply 2xl:text-4xl xl:text-2xl lg:text-2xl md:text-xl text-2xl  uppercase tracking-wider text-primary_light;
-        font-family: 'Shango-Bold';
+        @apply font-shangoB 2xl:text-4xl xl:text-2xl lg:text-2xl md:text-xl text-2xl  uppercase tracking-wider text-primary_light;
 
         span {
           @apply text-primary_yellow;
@@ -55,24 +50,7 @@
       }
 
       .img {
-        @apply w-6 absolute font-bold opacity-100;
-        transition: 0.5s;
-        animation-name: chevronAnim;
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
-
-        @keyframes chevronAnim {
-          from {
-            bottom: 15px;
-          }
-          50% {
-            bottom: 3px;
-          }
-          to {
-            bottom: 15px;
-          }
-        }
-
+        @apply w-6 absolute font-bold opacity-100 duration-500 animate-bounce bottom-0;
       }
     }
   }

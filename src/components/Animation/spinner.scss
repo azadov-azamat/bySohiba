@@ -1,8 +1,7 @@
 #main-page {
   @apply relative;
   .div-main {
-    @apply w-full h-screen bg-primary_light absolute z-[5000];
-    transition: 1s;
+    @apply w-full h-screen bg-primary_light absolute z-[5000] duration-1000;
   }
 
   .false {
@@ -66,7 +65,7 @@
     }
 
     .loading .effects {
-      transition: all 0.3s ease;
+      @apply duration-300 ease-in;
     }
   }
 }

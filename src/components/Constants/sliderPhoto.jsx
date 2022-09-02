@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useEffect, useState} from "react"
 import classes from "./scss/slider.module.scss"
 import Title from "./title"
 import OwlCarousel from "react-owl-carousel"
@@ -23,43 +23,33 @@ export default function SliderPhoto({title}) {
 
     const {catalog} = useSelector(state => state.variables)
 
+    const [width, setWidth] = useState(0)
+
+    useEffect(() => {
+        window.addEventListener('scroll', listenToScroll)
+    }, [])
+
+    const listenToScroll = () => {
+        const winScroll = window.innerWidth
+        setWidth(winScroll)
+    }
+
     const responsive = {
-        1500: {
-            minWidth: 1500,
+        0: {
+            slidesPerView: 2
         },
-        1405: {
-            minWidth: 1405,
+
+        530: {
+            minWidth: 530,
+            slidesPerView: 3
         },
-        1360: {
-            minWidth: 1360,
-        },
-        1300: {
-            minWidth: 1300,
-            slidesPerView: 6
-        },
-        1200: {
-            minWidth: 1200,
+        600: {
+            minWidth: 600,
             slidesPerView: 5
         },
-        1025: {
-            minWidth: 1025,
-            slidesPerView: 4
-        },
-        964: {
-            minWidth: 964,
-            slidesPerView: 4
-        },
-        708: {
-            minWidth: 708,
-            slidesPerView: 4
-        },
-        426: {
-            minWidth: 426,
-            slidesPerView: 3
-        },
-        320: {
-            minWidth: 320,
-            slidesPerView: 3
+        950: {
+            minWidth: 950,
+            slidesPerView: 5
         }
     }
 
@@ -94,7 +84,7 @@ export default function SliderPhoto({title}) {
                     }}
 
                 >
-                    {catalog.map((item, index) => (
+                    {catalog.slice(0, width < 530 ? 6 : 9).map((item, index) => (
                         <SwiperSlide key={item.id} className={'relative overflow-hidden cursor-pointer mx-1'}>
                             <Image item={item} imgId={"imageDoc"}/>
                         </SwiperSlide>

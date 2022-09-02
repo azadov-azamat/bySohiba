@@ -1,8 +1,6 @@
 .navbar {
   @apply w-full h-20 2xl:h-20 lg:h-16 2xl:px-52 xl:px-14 lg:px-7 px-6
-  flex items-center md:justify-between justify-center fixed;
-  font-family: 'Comfortaa';
-  transition: 0.5s;
+  flex items-center md:justify-between justify-center fixed font-comforts duration-500;
 }
 
 .logo {
@@ -82,23 +80,19 @@
   }
 
   .menu {
-    @apply fixed right-[-1000px] top-0 z-10 flex flex-col gap-10 justify-center items-center bg-primary_light w-full px-8 sm:px-14;
-    font-family: 'shango-bold';
-    transition-duration: .25s;
+    @apply fixed right-[-1000px] font-shangoB top-0 z-10 flex flex-col gap-10 justify-center items-center bg-primary_light w-full px-8 sm:px-14 duration-300;
 
     .menu-ul {
       @apply flex flex-col items-center gap-8 text-3xl sm:text-4xl leading-6 uppercase ;
       li {
         a{
-          transition-duration: .25s;
-          @apply hover:text-primary_yellow text-primary_text_black;
+          @apply hover:text-primary_yellow text-primary_text_black duration-300;
         }
       }
     }
 
     .variable {
-      @apply flex sm:flex-row flex-col gap-4 text-primary_text_black  h-36;
-      font-family: 'Comfortaa';
+      @apply flex sm:flex-row flex-col gap-4 font-comforts text-primary_text_black  h-36;
 
       .setting {
         @apply flex flex-col sm:gap-0 gap-7 justify-between h-full;
@@ -106,12 +100,10 @@
           @apply flex gap-4;
 
           button {
-            @apply px-6 py-2 border border-primary_black text-primary_black relative;
-            transition: 0.5s;
+            @apply px-6 py-2 border border-primary_black text-primary_black relative duration-500;
 
             span {
-              @apply bg-primary_black absolute -z-10 top-0 bottom-0 left-1/2 right-1/2;
-              transition: 0.5s;
+              @apply bg-primary_black absolute -z-10 top-0 bottom-0 left-1/2 right-1/2 duration-500;
             }
 
             &:hover {
@@ -153,9 +145,8 @@
 
 .nav-scroll {
   @apply w-full h-16 2xl:h-20 lg:h-16 2xl:px-52 xl:px-14 lg:px-7 px-6
-  flex items-center md:justify-between justify-center fixed bg-primary_light z-50 text-primary_text_black;
-  font-family: 'Comfortaa';
-  transition: 0.5s;
+  flex items-center md:justify-between justify-center font-comforts fixed bg-primary_light z-50 text-primary_text_black duration-500;
+
   .nav-ul {
     li {
       a {
@@ -217,23 +208,19 @@
     }
 
     .menu {
-      @apply fixed right-[-1000px] top-0 z-10 flex flex-col gap-10 justify-center items-center bg-primary_light w-full px-8 sm:px-14;
-      font-family: 'shango-bold';
-      transition-duration: .25s;
+      @apply fixed right-[-1000px] font-shangoB top-0 z-10 flex flex-col gap-10 justify-center items-center bg-primary_light w-full px-8 sm:px-14 duration-300;
 
       .menu-ul {
         @apply flex flex-col items-center gap-8 text-3xl sm:text-4xl leading-6 uppercase ;
         li {
           a{
-            transition-duration: .25s;
-            @apply hover:text-primary_yellow text-primary_text_black;
+            @apply hover:text-primary_yellow text-primary_text_black duration-300;
           }
         }
       }
 
       .variable {
-        @apply flex sm:flex-row flex-col gap-4 text-primary_text_black  h-36;
-        font-family: 'Comfortaa';
+        @apply flex sm:flex-row flex-col gap-4 font-comforts text-primary_text_black  h-36;
 
         .setting {
           @apply flex flex-col sm:gap-0 gap-7 justify-between h-full;
@@ -241,12 +228,10 @@
             @apply flex gap-4;
 
             button {
-              @apply px-6 py-2 border border-primary_black text-primary_black relative;
-              transition: 0.5s;
+              @apply px-6 py-2 border border-primary_black text-primary_black relative duration-500;
 
               span {
-                @apply bg-primary_black absolute -z-10 top-0 bottom-0 left-1/2 right-1/2;
-                transition: 0.5s;
+                @apply bg-primary_black absolute -z-10 top-0 bottom-0 left-1/2 right-1/2 duration-500;
               }
 
               &:hover {

@@ -26,6 +26,11 @@ module.exports = {
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
     },
+    fontFamily: {
+      comforts: ["Comfortaa"],
+      shangoB: ["Shango-Bold"],
+      shangoM: ["Shango-Medium"]
+    },
     extend: {
       animation: {
         "spin-slow": "spin 20s linear infinite",

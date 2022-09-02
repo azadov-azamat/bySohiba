@@ -2,8 +2,7 @@
   @apply 2xl:px-48 xl:px-14 lg:px-7 px-6 pb-16;
 
   .title {
-    @apply w-full flex justify-center items-center text-xl xl:text-3xl lg:text-2xl uppercase pb-2;
-    font-family: 'shango-bold';
+    @apply font-shangoB w-full flex justify-center items-center text-xl xl:text-3xl lg:text-2xl uppercase pb-2;
 
     p {
       @apply flex text-primary_text_black;
@@ -33,8 +32,7 @@
         }
 
         .p-text {
-          @apply w-full h-32 overflow-hidden text-ellipsis font-light text-base text-primary_black pt-2;
-          font-family: 'Comfortaa';
+          @apply font-comforts w-full h-32 overflow-hidden text-ellipsis font-light text-base text-primary_black pt-2;
         }
 
         .owner {
@@ -47,8 +45,7 @@
           }
 
           .name {
-            @apply font-medium text-base text-primary_black;
-            font-family: 'Comfortaa';
+            @apply font-comforts font-medium text-base text-primary_black;
           }
         }
       }
@@ -61,8 +58,7 @@
     .img {
       @apply w-[35%] relative overflow-hidden hidden xl:block;
       span {
-        @apply text-primary_text_black text-3xl tracking-wider;
-        font-family: 'Shango-Bold';
+        @apply font-shangoB text-primary_text_black text-3xl tracking-wider;
       }
 
       img {
@@ -85,8 +81,7 @@
       }
 
       textarea, input {
-        @apply border border-primary_black rounded text-[#7F7F7F];
-        font-family: 'Comfortaa';
+        @apply font-comforts border border-primary_black rounded text-[#7F7F7F];
 
         &:focus {
           border: 1px solid #6C9392 !important;
@@ -96,8 +91,7 @@
       .name {
         @apply flex flex-col md:w-[37%] w-full md:pt-0 pt-4 gap-4 pb-0;
         label {
-          @apply flex items-center font-normal text-sm text-primary_black gap-2 cursor-pointer;
-          font-family: 'Comfortaa';
+          @apply font-comforts flex items-center font-normal text-sm text-primary_black gap-2 cursor-pointer;
 
           span {
             @apply mx-2;

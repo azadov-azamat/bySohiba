@@ -34,7 +34,7 @@
         .nav {
           @apply w-full gap-9 flex items-center;
           div {
-            font-family: 'Comfortaa';
+            @apply font-comforts;
           }
           .active{
             @apply font-bold text-2xl text-primary_text_black;
@@ -50,8 +50,7 @@
           .text {
             @apply flex flex-col md:gap-2 gap-1 w-full;
             .p, span {
-              font-family: 'Comfortaa';
-              @apply text-base font-normal;
+              @apply font-comforts text-base font-normal;
             }
 
             span {
@@ -87,7 +86,7 @@
         .nav {
           @apply w-full gap-9 flex items-center;
           div {
-            font-family: 'Comfortaa';
+            @apply font-comforts;
           }
           .active{
             @apply font-bold text-2xl text-primary_text_black;
@@ -102,8 +101,7 @@
           .text {
             @apply flex flex-col gap-2 w-full;
             .p, span {
-              font-family: 'Comfortaa';
-              @apply text-base font-normal;
+              @apply font-comforts text-base font-normal;
             }
 
             span {
@@ -140,8 +138,7 @@
         @apply flex md:flex-row flex-col w-full items-center md:justify-between justify-center pb-2;
 
         .span {
-          @apply font-normal md:text-base text-sm text-primary_black;
-          font-family: 'Comfortaa';
+          @apply font-comforts font-normal md:text-base text-sm text-primary_black;
         }
 
         .img1 {

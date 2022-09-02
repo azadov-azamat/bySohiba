@@ -1,8 +1,7 @@
 .wrapper {
   @apply w-full pt-36 2xl:px-52 xl:px-14 lg:px-7 px-6;
   .title {
-    @apply w-full flex justify-center items-center text-center text-xl xl:text-3xl lg:text-2xl uppercase pb-10;
-    font-family: 'shango-bold';
+    @apply font-shangoB w-full flex justify-center items-center text-center text-xl xl:text-3xl lg:text-2xl uppercase pb-10;
 
     p {
       @apply flex text-primary_text_black text-center;
@@ -29,8 +28,7 @@
       }
     }
     .img {
-      @apply md:w-80 w-64;
-      transition: 0.5s;
+      @apply md:w-80 w-64 duration-500;
 
     }
 
@@ -42,14 +40,12 @@
         }
 
         p {
-          @apply font-normal text-lg uppercase text-primary_blackmd;
-          font-family: 'Shango-Medium';
+          @apply font-shangoM font-normal text-lg uppercase text-primary_blackmd;
         }
       }
 
       p {
-        @apply text-xl text-primary_text_black;
-        font-family: 'shango-medium-2';
+        @apply font-shangoM text-xl text-primary_text_black;
       }
     }
   }

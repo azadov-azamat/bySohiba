@@ -23,20 +23,6 @@ export default function Catalog({title, data}) {
         setWidth(winScroll)
     }
 
-    function status(status) {
-        switch (status) {
-            case "NEW":
-                return (
-                    <span className={classes.new}>Новинка</span>
-                )
-            default:
-            case "HAND":
-                return (
-                    <span className={classes.hand}>ручная работа</span>
-                )
-        }
-    }
-
     function imagePreview(id) {
         setCurrentImg(id - 1)
         setTimeout(() => {
@@ -49,8 +35,14 @@ export default function Catalog({title, data}) {
             <Title text={title}/>
             <Row className={classes.row}>
                 {
-                    data.map(item => <Col key={item.id} onClick={() => imagePreview(item.id)}
-                                          className={'relative overflow-hidden cursor-pointer'}>
+                    data.slice(0, width < 530 ? 6 : 10).map(item =>
+                        <Col key={item.id}
+                             span={11}
+                             sm={7}
+                             lg={5}
+                             xl={4}
+                             onClick={() => imagePreview(item.id)}
+                             className={classes.col}>
                         <Image item={item}/>
                     </Col>)
                 }

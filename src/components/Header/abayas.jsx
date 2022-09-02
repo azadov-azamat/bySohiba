@@ -19,6 +19,12 @@ export default function Abayas() {
 Модные дубайский абайи от нашего бренда
                     </span>
                 </div>
+                <a href={"tel:+998 97 101 88-80"} className={"flex items-center gap-2 md:hidden text-base text-primary_light hover:text-primary_yellow pt-12"}>
+                    <FiPhone/>
+                    <div className={"text-base"}>
+                        +998 97 101 88-80
+                    </div>
+                </a>
             </div>
             <div className={classes['head-bottom']}>
                 <p>

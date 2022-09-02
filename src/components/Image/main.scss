@@ -1,8 +1,6 @@
 #image {
-  @apply 2xl:w-56 xl:w-52 lg:w-48 md:w-44 sm:w-40 w-36 rounded;
-  transition: 0.5s;
+  @apply w-full rounded duration-500;
   &:hover {
-    @apply rounded;
     transform: scale(1.1);
   }
 
@@ -13,8 +11,7 @@
   transform: rotate(45deg);
 
   span {
-    @apply w-full py-2 px-12 h-full text-xs tracking-wider;
-    font-family: 'Shango-Bold';
+    @apply w-full h-full py-2 px-12 font-shangoB text-xs tracking-wider;
   }
 
   .new {
