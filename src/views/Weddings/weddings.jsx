@@ -4,6 +4,8 @@ import * as About from "../../components/AboutPage"
 import * as Constant from "../../components/Constants"
 import {useSelector} from "react-redux"
 import AOS from "aos"
+import Instagram from "../../components/Instagram";
+import Comments from "../../components/Comments";
 
 export default function Weddings() {
 
@@ -32,8 +34,11 @@ export default function Weddings() {
             <About.Wedding/>
             <Constant.Catalog title={"каталог"} data={catalog}/>
             {
-                width < 530 ? <Constant.SliderVideo title={"видеогалерея"} data={videos}/> : <Constant.Video title={"видеогалерея"} data={videos}/>
+                width < 530 ? <Constant.SliderVideo title={"видеогалерея"} data={videos}/> :
+                    <Constant.Video title={"видеогалерея"} data={videos}/>
             }
+            <Instagram/>
+            <Comments/>
         </>
     )
 }

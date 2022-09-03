@@ -43,7 +43,6 @@ export default function CreateComment() {
         }
     })
 
-    console.log(formik)
     return (
         <div className={classes.create}>
             <div className={classes.img}>

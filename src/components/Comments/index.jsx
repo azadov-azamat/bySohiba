@@ -36,7 +36,7 @@ export default function Comments() {
             items: 4
         }
     }
-    console.log(comments)
+
     return (
         <div className={classes.wrapper}>
             <Title text={"Дадим слова нашим клиентам"}/>

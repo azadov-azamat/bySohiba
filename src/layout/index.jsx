@@ -25,8 +25,6 @@ export default function Layout({children}) {
             <main className={""}>
                 {children}
             </main>
-            <Instagram/>
-            <Comments/>
             <Footer/>
         </>
     )

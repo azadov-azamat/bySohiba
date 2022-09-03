@@ -6,6 +6,10 @@ import Photos from "../../components/PhotoGallery"
 
 import {useSelector} from "react-redux"
 import AOS from "aos"
+import img from "../../assets/png/bg/abayas.png";
+import bgEffect from "../../assets/png/bg-effect/BGefferct (Beauty salon).png";
+import Instagram from "../../components/Instagram";
+import Comments from "../../components/Comments";
 
 export default function Beauty() {
 
@@ -20,9 +24,14 @@ export default function Beauty() {
     return (
         <>
             <Header.Beauty/>
-            <About.Beauty/>
-            <Constant.SliderVideo title={"работа наших визажистов"} data={videos}/>
-            <Photos/>
+            <div className="relative w-full h-auto">
+                <img src={bgEffect} alt="" className={"absolute w-full h-full top-0"}/>
+                <About.Beauty/>
+                <Constant.SliderVideo title={"работа наших визажистов"} data={videos}/>
+                <Photos/>
+                <Instagram/>
+                <Comments/>
+            </div>
         </>
     )
 }

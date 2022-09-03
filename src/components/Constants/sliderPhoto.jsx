@@ -19,7 +19,7 @@ import SwiperCore, {
 
 SwiperCore.use([Navigation, Pagination, Autoplay, Virtual]);
 
-export default function SliderPhoto({title}) {
+export default function SliderPhoto({title, bg}) {
 
     const {catalog} = useSelector(state => state.variables)
 
@@ -55,10 +55,12 @@ export default function SliderPhoto({title}) {
 
     return (
         <section className={classes.slider} id={"slider-photo"}>
-            <div className="w-full">
-                <img src={pattern1} alt="" width={250} className={"flex absolute -top-36"}/>
-                <img src={pattern2} alt="" width={280} className={"flex absolute left-1/4 -top-44"}/>
-            </div>
+            {/*{*/}
+            {/*    bg ? <div className="w-full">*/}
+            {/*        <img src={pattern1} alt="" width={250} className={"flex absolute -top-36"}/>*/}
+            {/*        <img src={pattern2} alt="" width={280} className={"flex absolute left-1/4 -top-44"}/>*/}
+            {/*    </div> : ""*/}
+            {/*}*/}
             <Title text={title}/>
             <div className={classes['owl-theme']}>
                 <Swiper

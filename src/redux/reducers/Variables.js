@@ -67,13 +67,13 @@ export const variablesSlice = createSlice({
             {
                 id: 2,
                 img: abayas,
-                title: 'Accessories',
+                title: 'abayas',
                 text: 'Абая Бутик'
             },
             {
                 id: 3,
                 img: beauty,
-                title: 'Accessories salon',
+                title: 'Beauty salon',
                 text: 'салон красоты'
             },
             {
