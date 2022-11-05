@@ -1,22 +1,4 @@
-// export const getAllCategories = createAsyncThunk('category/getAllCategories', async (query, {
-//     rejectWithValue,
-//     dispatch
-// }) => {
-//     try {
-//         const response = await http_no_auth.get("v1/auth/all-categories", {
-//             params: query
-//         })
-//         if (response.data?.data === null) return rejectWithValue(response.data.message)
-//         return response.data
-//     } catch (error) {
-//         const error_status = error.response?.status
-//         if (error_status === 404) window.location.replace("/not_found/404")
-//         if (error_status === 401) dispatch(auth.handleRefreshLogin({refreshToken: localStorage.getItem(REFRESH_TOKEN)}))
-//         return rejectWithValue(error.message)
-//     }
-// })
-
-import {createSlice} from "@reduxjs/toolkit"
+import {createAsyncThunk, createSlice} from "@reduxjs/toolkit"
 import wedding from "../../assets/png/wedding.png"
 import abayas from "../../assets/png/abayas.png"
 import beauty from "../../assets/png/beauty.png"
@@ -53,6 +35,32 @@ import photoG1 from "../../assets/photoGallery/img.png"
 import photoG2 from "../../assets/photoGallery/img_1.png"
 import photoG3 from "../../assets/photoGallery/img_2.png"
 import photoG4 from "../../assets/photoGallery/img_3.png"
+import {http_instagram} from "../../utils/api"
+import {toast} from "react-toastify"
+
+export const getInstagramPhotosList = createAsyncThunk('variables/getInstagramPhotosList', async (insta_token, {rejectWithValue,}) => {
+    try {
+        const response = await http_instagram.get(`/me/media?fields=id,caption&access_token=${insta_token}`)
+        if (response.data?.data === null) return rejectWithValue(response.data.message)
+        return response.data
+    } catch (error) {
+        const error_status = error.response?.status
+        console.log(error)
+        return rejectWithValue(error.message)
+    }
+})
+
+export const getInstagramPhotosData = createAsyncThunk('variables/getInstagramPhotosData', async (data, {rejectWithValue,}) => {
+    try {
+        const response = await http_instagram.get(`/${data?.photoId}?fields=id,media_type,media_url,username,timestamp&access_token=${data?.token}`)
+        if (response.data?.data === null) return rejectWithValue(response.data.message)
+        return response.data
+    } catch (error) {
+        const error_status = error.response?.status
+        console.log(error)
+        return rejectWithValue(error.message)
+    }
+})
 
 export const variablesSlice = createSlice({
     name: 'variables',
@@ -83,28 +91,8 @@ export const variablesSlice = createSlice({
                 text: 'Аксессуары'
             }
         ],
-        instagram: [
-            {
-                id: 1,
-                img: img1
-            },
-            {
-                id: 2,
-                img: img2
-            },
-            {
-                id: 3,
-                img: img3
-            },
-            {
-                id: 4,
-                img: img4
-            },
-            {
-                id: 5,
-                img: img5
-            }
-        ],
+        instaPhotosId: [],
+        instaPhotoData: {},
         comments: [
             {
                 id: 1,
@@ -238,7 +226,31 @@ export const variablesSlice = createSlice({
             state.comments.push(action.payload)
         }
     },
-    extraReducers: {}
+    extraReducers: {
+        [getInstagramPhotosList.fulfilled]: (state, actions) => {
+            state.instaPhotosId = actions.payload?.data
+            state.isLoading = false
+        },
+        [getInstagramPhotosList.pending]: (state) => {
+            state.isLoading = true
+        },
+        [getInstagramPhotosList.rejected]: (state) => {
+            toast.error("Error")
+            state.isLoading = false
+        },
+
+        [getInstagramPhotosData.fulfilled]: (state, actions) => {
+            state.instaPhotoData[actions.meta.arg?.photoId] = actions.payload
+            state.isLoading = false
+        },
+        [getInstagramPhotosData.pending]: (state) => {
+            state.isLoading = true
+        },
+        [getInstagramPhotosData.rejected]: (state) => {
+            toast.error("Error")
+            state.isLoading = false
+        }
+    }
 })
 
 export const {handleRefresh, handleSetId, pushComment} = variablesSlice.actions

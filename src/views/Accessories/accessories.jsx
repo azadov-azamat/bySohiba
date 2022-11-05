@@ -4,9 +4,9 @@ import * as Constant from "../../components/Constants"
 
 import {useSelector} from "react-redux"
 import AOS from "aos"
-import Instagram from "../../components/Instagram";
-import Comments from "../../components/Comments";
-import bgEffect from "../../assets/png/bg-effect/BGeffect(Accessories).png";
+import Instagram from "../../components/Instagram"
+import Comments from "../../components/Comments"
+import bgEffect from "../../assets/png/bg-effect/BGeffect(Accessories).png"
 
 export default function Accessories() {
 
@@ -15,7 +15,7 @@ export default function Accessories() {
     useEffect(() => {
         AOS.init({
             duration: 1000
-        });
+        })
     }, [])
 
     return (

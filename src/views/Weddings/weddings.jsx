@@ -4,8 +4,8 @@ import * as About from "../../components/AboutPage"
 import * as Constant from "../../components/Constants"
 import {useSelector} from "react-redux"
 import AOS from "aos"
-import Instagram from "../../components/Instagram";
-import Comments from "../../components/Comments";
+import Instagram from "../../components/Instagram"
+import Comments from "../../components/Comments"
 
 export default function Weddings() {
 
@@ -25,7 +25,7 @@ export default function Weddings() {
     useEffect(() => {
         AOS.init({
             duration: 1000
-        });
+        })
     }, [])
 
     return (

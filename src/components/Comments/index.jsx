@@ -1,5 +1,5 @@
 import React from "react"
-import classes from "./comments.module.scss"
+import classes from './comment.module.scss'
 import ListComments from "./ListComments"
 import OwlCarousel from 'react-owl-carousel'
 import {useSelector} from "react-redux"

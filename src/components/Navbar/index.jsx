@@ -174,7 +174,9 @@ export default function Navbar() {
                             <div className={classes.social}>
                                 <ul>
                                     {social.map((item, index) => <li key={index}><a href={item.link}
-                                                                                    target={"_blank"}>{item.name}</a>
+                                                                                    target={"_blank"}
+                                                                                    rel={"noopener"}
+                                    >{item.name}</a>
                                     </li>)}
                                 </ul>
                             </div>

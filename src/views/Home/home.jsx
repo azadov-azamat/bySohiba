@@ -2,7 +2,6 @@ import React, {useEffect} from 'react'
 import AOS from "aos"
 import Brands from "../../components/Brands"
 import * as Header from "../../components/Header"
-import img from "../../assets/png/bg/abayas.png"
 import bgEffect from "../../assets/png/bg-effect/background effect(Bridal dress).png"
 import Instagram from "../../components/Instagram"
 import Comments from "../../components/Comments"

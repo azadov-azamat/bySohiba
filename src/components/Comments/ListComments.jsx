@@ -1,5 +1,5 @@
 import React from "react"
-import classes from "./comments.module.scss"
+import classes from './comment.module.scss'
 import {AiFillStar} from "react-icons/ai"
 import commentImg from "../../assets/ico/comment.png"
 

@@ -5,7 +5,6 @@ import routes from "./router"
 import {defaultRoute} from "./utils/constants"
 
 function App() {
-
     return (
         <Layout>
             <Routes>

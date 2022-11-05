@@ -17,6 +17,7 @@ export const clientUser = "/client"
 export const notFound = "/not_found/404"
 
 export const BASE_URL = "http://localhost:8081/api/"
+export const BASE_URL_INSTAGRAM = "https://graph.instagram.com"
 // export const BASE_URL = "https://smart.adliya.uz/api/"
 export const BASE_URL_HOME = "http://localhost:3000/home"
 // export const BASE_URL_HOME = "https://smart.adliya.uz/home"

@@ -6,10 +6,9 @@ import Photos from "../../components/PhotoGallery"
 
 import {useSelector} from "react-redux"
 import AOS from "aos"
-import img from "../../assets/png/bg/abayas.png";
-import bgEffect from "../../assets/png/bg-effect/BGefferct (Beauty salon).png";
-import Instagram from "../../components/Instagram";
-import Comments from "../../components/Comments";
+import bgEffect from "../../assets/png/bg-effect/BGefferct (Beauty salon).png"
+import Instagram from "../../components/Instagram"
+import Comments from "../../components/Comments"
 
 export default function Beauty() {
 
@@ -18,7 +17,7 @@ export default function Beauty() {
     useEffect(() => {
         AOS.init({
             duration: 1000
-        });
+        })
     }, [])
 
     return (

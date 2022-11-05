@@ -64,7 +64,6 @@ export default function SliderPhoto({title, bg}) {
             <Title text={title}/>
             <div className={classes['owl-theme']}>
                 <Swiper
-                    slidesPerColumn={2}
                     spaceBetween={30}
                     allowTouchMove={true}
                     autoHeight={true}
