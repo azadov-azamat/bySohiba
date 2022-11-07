@@ -4,15 +4,25 @@ import * as About from "../../components/AboutPage"
 import * as Constant from "../../components/Constants"
 import Photos from "../../components/PhotoGallery"
 
-import {useSelector} from "react-redux"
+import {useDispatch, useSelector} from "react-redux"
 import AOS from "aos"
 import bgEffect from "../../assets/png/bg-effect/BGeffect (Abayas).png"
 import Instagram from "../../components/Instagram"
 import Comments from "../../components/Comments"
+import * as inst from "../../redux/reducers/Variables"
+import {INSTAGRAM_TOKEN} from "../../utils/constants"
 
 export default function Abayas() {
 
-    const {catalog, videos} = useSelector(state => state.variables)
+    const {catalog} = useSelector(state => state.variables)
+
+    const dispatch = useDispatch()
+    const {instaVideos, isLoading} = useSelector(state => state.variables)
+
+    useEffect(() => {
+        if (instaVideos?.length === 0)
+            dispatch(inst.getInstagramVideosList(INSTAGRAM_TOKEN))
+    }, [])
 
     useEffect(() => {
         AOS.init({
@@ -30,7 +40,7 @@ export default function Abayas() {
                 <Constant.Catalog title={"Abaya платья"} data={catalog}/>
                 <Constant.SliderPhoto title={"Обувь"} bg={true}/>
                 <Constant.SliderPhoto title={"аксессуары"} bg={false}/>
-                <Constant.SliderVideo title={"Видеоблог"} data={videos}/>
+                <Constant.SliderVideo title={"Видеоблог"} data={instaVideos}/>
                 <Instagram/>
                 <Comments/>
             </div>

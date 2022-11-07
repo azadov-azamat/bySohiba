@@ -1,6 +1,5 @@
 import React from 'react'
 import "./spinner.scss"
-import Spinner from "./spinner";
 
 export default function Refresh({loading}) {
     return (

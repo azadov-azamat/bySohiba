@@ -2,14 +2,24 @@ import React, {useEffect, useState} from "react"
 import * as Header from "../../components/Header"
 import * as About from "../../components/AboutPage"
 import * as Constant from "../../components/Constants"
-import {useSelector} from "react-redux"
+import {useDispatch, useSelector} from "react-redux"
 import AOS from "aos"
 import Instagram from "../../components/Instagram"
 import Comments from "../../components/Comments"
+import * as inst from "../../redux/reducers/Variables"
+import {INSTAGRAM_TOKEN} from "../../utils/constants"
 
 export default function Weddings() {
 
-    const {catalog, videos} = useSelector(state => state.variables)
+    const dispatch = useDispatch()
+
+    const {catalog} = useSelector(state => state.variables)
+    const {instaVideos, isLoading} = useSelector(state => state.variables)
+
+    useEffect(() => {
+        if (instaVideos?.length === 0)
+            dispatch(inst.getInstagramVideosList(INSTAGRAM_TOKEN))
+    }, [])
 
     const [width, setWidth] = useState(0)
 
@@ -34,8 +44,8 @@ export default function Weddings() {
             <About.Wedding/>
             <Constant.Catalog title={"каталог"} data={catalog}/>
             {
-                width < 530 ? <Constant.SliderVideo title={"видеогалерея"} data={videos}/> :
-                    <Constant.Video title={"видеогалерея"} data={videos}/>
+                width < 530 ? <Constant.SliderVideo title={"видеогалерея"} data={instaVideos}/> :
+                    <Constant.Video title={"видеогалерея"} data={instaVideos}/>
             }
             <Instagram/>
             <Comments/>

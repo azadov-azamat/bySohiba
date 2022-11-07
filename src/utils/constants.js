@@ -30,3 +30,6 @@ export const ADVICE_URL = "https://advice.uz/api/"
 
 export const OPEN_DATA_URL = "https://data.egov.uz"
 export const OPEN_DATA_TOKEN = "47c76b1697905064dce3d4b84dca3e2a"
+
+
+export const INSTAGRAM_TOKEN = "IGQVJXV09sa3luYl84aEQzWkdpbDhlM3JUeG1RN0dkbWJyWnNVR0k0VWdsQ25qelpqTURhOVhtdk1xbUFoSWlSMnpuMTg4N1pEbWl3ZAlNRSVBMX0dqTUJWRXV4SmFENTZAwRTJhM1laUF9OY0t3cU1MZAAZDZD"

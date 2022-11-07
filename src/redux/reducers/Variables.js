@@ -4,14 +4,7 @@ import abayas from "../../assets/png/abayas.png"
 import beauty from "../../assets/png/beauty.png"
 import accessories from "../../assets/png/accessories.png"
 
-import img1 from "../../assets/delete/img.png"
-import img2 from "../../assets/delete/img_1.png"
-import img3 from "../../assets/delete/img_2.png"
-import img4 from "../../assets/delete/img_3.png"
-import img5 from "../../assets/delete/img_4.png"
-
 // ========== CATALOG ============
-
 import catalog1 from "../../assets/catalog/img.png"
 import catalog2 from "../../assets/catalog/img_1.png"
 import catalog3 from "../../assets/catalog/img_2.png"
@@ -24,13 +17,6 @@ import catalog9 from "../../assets/catalog/img_8.png"
 import catalog10 from "../../assets/catalog/img_9.png"
 
 // ========== VIDEO ============
-import video1 from "../../assets/video/video1.mp4"
-import video2 from "../../assets/video/video2.mp4"
-import video3 from "../../assets/video/video3.mp4"
-import video4 from "../../assets/video/video4.mp4"
-import video5 from "../../assets/video/video5.mp4"
-
-// ========== VIDEO ============
 import photoG1 from "../../assets/photoGallery/img.png"
 import photoG2 from "../../assets/photoGallery/img_1.png"
 import photoG3 from "../../assets/photoGallery/img_2.png"
@@ -38,10 +24,11 @@ import photoG4 from "../../assets/photoGallery/img_3.png"
 import {http_instagram} from "../../utils/api"
 import {toast} from "react-toastify"
 
-export const getInstagramPhotosList = createAsyncThunk('variables/getInstagramPhotosList', async (insta_token, {rejectWithValue,}) => {
+export const getInstagramVideosList = createAsyncThunk('variables/getInstagramVideosList', async (insta_token, {rejectWithValue,}) => {
     try {
-        const response = await http_instagram.get(`/me/media?fields=id,caption&access_token=${insta_token}`)
+        const response = await http_instagram.get(`/me/media?fields=id,caption,media_type,media_url&access_token=${insta_token}`)
         if (response.data?.data === null) return rejectWithValue(response.data.message)
+        console.log(response.data)
         return response.data
     } catch (error) {
         const error_status = error.response?.status
@@ -50,10 +37,11 @@ export const getInstagramPhotosList = createAsyncThunk('variables/getInstagramPh
     }
 })
 
-export const getInstagramPhotosData = createAsyncThunk('variables/getInstagramPhotosData', async (data, {rejectWithValue,}) => {
+export const getInstagramImageList = createAsyncThunk('variables/getInstagramImageList', async (insta_token, {rejectWithValue,}) => {
     try {
-        const response = await http_instagram.get(`/${data?.photoId}?fields=id,media_type,media_url,username,timestamp&access_token=${data?.token}`)
+        const response = await http_instagram.get(`/me/media?fields=id,caption,media_type,media_url&access_token=${insta_token}`)
         if (response.data?.data === null) return rejectWithValue(response.data.message)
+        console.log(response.data)
         return response.data
     } catch (error) {
         const error_status = error.response?.status
@@ -91,8 +79,8 @@ export const variablesSlice = createSlice({
                 text: 'Аксессуары'
             }
         ],
-        instaPhotosId: [],
-        instaPhotoData: {},
+        instaVideos: [],
+        instaImages: [],
         comments: [
             {
                 id: 1,
@@ -163,13 +151,6 @@ export const variablesSlice = createSlice({
             {id: 9, img: catalog9, type: "OLD"},
             {id: 10, img: catalog10, type: "OLD"}
         ],
-        videos: [
-            {id: 1, src: video1},
-            {id: 2, src: video2},
-            {id: 3, src: video3},
-            {id: 4, src: video4},
-            {id: 5, src: video5}
-        ],
         photosAbaya: [
             {id: 1, img: photoG1},
             {id: 2, img: photoG2},
@@ -227,26 +208,33 @@ export const variablesSlice = createSlice({
         }
     },
     extraReducers: {
-        [getInstagramPhotosList.fulfilled]: (state, actions) => {
-            state.instaPhotosId = actions.payload?.data
+        [getInstagramImageList.fulfilled]: (state, actions) => {
+            const data = actions.payload?.data
+            for (let instaPost of data) {
+                if (instaPost?.media_type === "IMAGE")
+                    state.instaImages.push(instaPost)
+            }
             state.isLoading = false
         },
-        [getInstagramPhotosList.pending]: (state) => {
+        [getInstagramImageList.pending]: (state) => {
             state.isLoading = true
         },
-        [getInstagramPhotosList.rejected]: (state) => {
+        [getInstagramImageList.rejected]: (state) => {
             toast.error("Error")
             state.isLoading = false
         },
-
-        [getInstagramPhotosData.fulfilled]: (state, actions) => {
-            state.instaPhotoData[actions.meta.arg?.photoId] = actions.payload
+        [getInstagramVideosList.fulfilled]: (state, actions) => {
+            const data = actions.payload?.data
+            for (let instaPost of data) {
+                if (instaPost?.media_type === "VIDEO")
+                    state.instaVideos.push(instaPost)
+            }
             state.isLoading = false
         },
-        [getInstagramPhotosData.pending]: (state) => {
+        [getInstagramVideosList.pending]: (state) => {
             state.isLoading = true
         },
-        [getInstagramPhotosData.rejected]: (state) => {
+        [getInstagramVideosList.rejected]: (state) => {
             toast.error("Error")
             state.isLoading = false
         }

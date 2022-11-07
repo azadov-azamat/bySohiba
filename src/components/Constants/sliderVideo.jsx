@@ -56,9 +56,9 @@ export default function SliderVideo({title, data}) {
 
                 >
                     {data.map((item, index) => (
-                        <SwiperSlide key={item.id} className={"2xl:w-56 xl:w-52 lg:w-48 md:w-44 sm:w-40 w-36 h-auto"}>
-                            <video controls>
-                                <source src={item.src} type="video/mp4"/>
+                        <SwiperSlide key={item.id} className={"2xl:w-56 xl:w-52 lg:w-48 md:w-44 sm:w-40 w-36"}>
+                            <video controls className={"w-full h-[400px]"}>
+                                <source src={item.media_url} type="video/mp4"/>
                                 Your browser does not support HTML video.
                             </video>
                         </SwiperSlide>

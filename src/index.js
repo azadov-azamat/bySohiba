@@ -6,7 +6,7 @@ import {Provider} from 'react-redux'
 
 //STORE
 import {store} from "./redux/store"
-import "./utils/bootstrap"
+// import "./utils/bootstrap"
 
 // CSS
 import './index.css'
