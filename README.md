@@ -1,7 +1,7 @@
 # By Sohiba Dresses
 
 Proyektga instagram API ulangan, ozingizning instagram akkountingizni chiqarish uchun, developer.facebook.com saytidan 
-instagram access_tokenini generatsiya qilishingiz kerak bo`ladi. Tokenni src/utils/constants papkasi ichidagi
+instagram access_tokenini generatsiya qilishingiz kerak bo'ladi. Tokenni src/utils/constants papkasi ichidagi
 `INSTAGRAM_TOKEN` o'zgaruvchisiga joylashingiz kerak.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
