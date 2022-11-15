@@ -6,7 +6,7 @@ import langIco from "../../assets/ico/lang.png"
 import langIcoColor from "../../assets/ico/langColor.png"
 
 const Languages = () => {
-
+    
     const dispatch = useDispatch()
     const { i18n } = useTranslation()
     const {language} = i18n
